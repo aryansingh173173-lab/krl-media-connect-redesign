@@ -1,3 +1,4 @@
 _drive_state.json
 .vercel
 _*.py
+.local-server.*.log

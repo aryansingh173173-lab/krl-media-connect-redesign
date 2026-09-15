@@ -1,368 +1,738 @@
-const T = {
+const EXTRA_COPY = {
   en: {
-    navDay: "The day",
-    navGallery: "Gallery",
-    navPress: "Press",
-    navMedia: "Media",
-    brand: "Media Connect",
-    heroKicker: "14 September 2026",
-    heroTitle: "Protyabartan",
-    heroSub: "A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.",
-    fDate: "Date",
-    fDateV: "Monday, 14 September 2026",
-    fPlace: "Venue",
-    fPlaceV: "Rabindra Okakura Bhawan, DD Block, Salt Lake, Kolkata",
-    fTheme: "Theme",
-    fThemeV: "Protyabartan, the homecoming",
-    fActs: "Named that morning",
-    fActsV: "KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.",
-    inviteTitle: "The invitation, as printed",
-    inviteLede: "Issued in English and Bangla from Bharatiya Krishak Samaj West Bengal and KarmYog. The card is an artefact of the morning. Body copy of this essay names only those who were in the hall.",
-    capInviteEn: "English invitation. 9:30 AM. Rabindra Okakura Bhawan.",
-    capInviteBn: "Bengali invitation. Same morning, same hall.",
-    progTitle: "The printed programme",
-    progLede: "The order as issued. Photographs below carry the live room.",
-    p1t: "09:30", p1: "Sacred opening. KarmYog Seva Mantra and Vande Mataram.",
-    p2t: "09:35", p2: "Welcome and stage call. Smt. Reena J. Sarkar.",
-    p3t: "09:40", p3: "Video testimonial. Shri Partha S. Chatterjee, Global Ambassador, BKS West Bengal. Video keynote from Dr. Krishan Bir Chaudhary.",
-    p4t: "09:50", p4: "Foundational vision and KRL Bengal launch. MahAcharya Shri Sourabh J. Sarkar.",
-    p5t: "10:05", p5: "Felicitation of Smt. Rinku Majumder Ghosh, Adhyaksha, Mahila Wing.",
-    p6t: "10:10", p6: "Ministerial address. Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
-    p7t: "10:25", p7: "Keynote. Smt. Rinku Majumder Ghosh.",
-    p8t: "10:35", p8: "Guest of Honour. Shri Debashish Dhar, MLA, Sonarpur Uttar.",
-    p9t: "10:45", p9: "Krishak Samaj Durga Puja 2026 announcement. Smt. Reena J. Sarkar.",
-    p10t: "10:50", p10: "Media questions. MahAcharya Shri Sourabh J. Sarkar and Smt. Rinku Majumder Ghosh.",
-    p11t: "11:10", p11: "Vote of thanks and National Anthem. Smt. Reena J. Sarkar.",
-    roomTitle: "The room",
-    roomLede: "Bamboo, diya, tulsi, a yellow cloth on the lectern. The hall at Okakura before the first greeting.",
-    capStage: "Stage set. Welcome banner, puja, and the four invited faces as printed.",
-    openTitle: "The greeting",
-    capOpen: "MahAcharya Shri Sourabh J. Sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal on the bamboo seats.",
-    parthaTitle: "The video testimonial",
-    parthaLede: "The hall played the film of Shri Partha S. Chatterjee, Global Ambassador and Senior Advisor for AI, Technology and Energy Transition, Bharatiya Krishak Samaj West Bengal.",
-    parthaName: "Shri Partha S. Chatterjee",
-    parthaRole: "Global Ambassador, BKS West Bengal",
-    capPartha: "The card that sat with the film. Four minutes forty-seven seconds.",
-    minTitle: "The Minister",
-    minLede: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, was on the stage at the opening. Krishi Ratna League Bengal was named in that room.",
-    capMinListen: "MahAcharya Shri Sourabh J. Sarkar at the lectern. Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal listening.",
-    capMinPair: "Smt. Rinku Majumder Ghosh with Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, on stage.",
-    capMin: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
-    capMinFeature: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with Smt. Rinku Majumder Ghosh and Gunamata Reena J. Sarkar.",
-    rinkuTitle: "Adhyaksha",
-    rinkuLede: "Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat on the pink sari for the rest of the morning.",
-    capRinku: "Smt. Rinku Majumder Ghosh.",
-    capTrio: "Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
-    capBell: "The bell. Standing for the felicitation. MahAcharya Shri Sourabh J. Sarkar, Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
-    capRinkuPodium: "Smt. Rinku Majumder Ghosh at the lectern. The keynote, 10:25.",
-    dharTitle: "Guest of Honour",
-    dharLede: "Shri Debashish Dhar, MLA, Sonarpur Uttar, addressed the hall from the yellow-draped lectern.",
-    capDhar: "Shri Debashish Dhar at the lectern.",
-    capGarland: "A garland on the Guest of Honour. The hall photographing.",
-    voicesTitle: "What the stage carried",
-    voicesNote: "The argument of the morning, in each voice. Exact words from the recordings will replace these lines.",
-    v1n: "Shri Dudh Kumar Mondal",
-    v1r: "Hon'ble Minister of Agriculture, West Bengal",
-    v1: "The farmer is not a backdrop to policy. Krishi Ratna League puts the field at the centre of Bengal's next public contest.",
-    v2n: "Smt. Rinku Majumder Ghosh",
-    v2r: "Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj",
-    v2: "Half of Bengal's farm is a woman. The Mahila Wing is not a side room of the Samaj.",
-    v3n: "Shri Debashish Dhar",
-    v3r: "MLA, Sonarpur Uttar",
-    v3: "Protyabartan is not nostalgia. It is the village asking its children to stand with the soil again.",
-    v4n: "MahAcharya Shri Sourabh J. Sarkar",
-    v4r: "State President, BKS West Bengal. KarmYog Ashram",
-    v4: "A league with a working farm at the end of it, not a trophy on a shelf.",
-    hallTitle: "The hall",
-    capHall: "Press, farmers, the team. Rabindra Okakura Bhawan.",
-    capLaunch: "Launch of Krishi Ratna League Bengal on the screen. MahAcharya Shri Sourabh J. Sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA, seated.",
-    pressTitle: "The press huddle",
-    pressLede: "After the programme the mics closed in. MahAcharya Shri Sourabh J. Sarkar, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar, MLA, and Gunamata Reena J. Sarkar took the questions together. Bonglive, 24 Ghanta and the rest of the room stayed until the last answer.",
-    capPanel: "The press panel. Seated, left to right: Shri Rajib Roy, Gunamata Reena J. Sarkar, MahAcharya Shri Sourabh J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA. Mics on the yellow cloth.",
-    capHuddle: "Cameras in. MahAcharya Shri Sourabh J. Sarkar facing the room.",
-    capPressDhar: "Shri Debashish Dhar to the mics.",
-    capClose: "Outside Rabindra Okakura Bhawan after the morning.",
-    navGuests: "Guests",
-    guestsTitle: "The guests",
-    guestsLede: "Who sat on the panel, in the order they sat. Titles as held on the day.",
-    gn1: "Shri Rajib Roy",
-    gr1: "",
-    gn2: "Gunamata Reena J. Sarkar",
-    gr2: "Chief of Technology, Bharatiya Krishak Samaj. Co-Founder and CTO, KarmYog for the 21st Century",
-    gn3: "MahAcharya Shri Sourabh J. Sarkar",
-    gr3: "State President, Bharatiya Krishak Samaj West Bengal. KarmYog Ashram",
-    gn4: "Smt. Rinku Majumder Ghosh",
-    gr4: "Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj West Bengal",
-    gn5: "Shri Debashish Dhar",
-    gr5: "MLA, Sonarpur Uttar",
-    capArrival: "Arrival at Rabindra Okakura Bhawan. The conch and the bell before the hall opened.",
-    capTrioOutside: "Gunamata Reena J. Sarkar with guests outside Rabindra Okakura Bhawan.",
-    capGuestsArrival: "Guests gathering outside Rabindra Okakura Bhawan before the hall opened.",
-    capHospitality: "Hospitality in the green room. Clay cups carried round before the programme.",
-    capHallFront: "The front rows, listening. Press, farmers and the Samaj together.",
-    galleryTitle: "From the hall",
-    galleryLede: "Stills and clips from the Media Connect. The Krishi Ratna League intro played behind the welcome.",
-    g1: "From the stage into the hall.",
-    g2: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
-    g3: "Green room. A clay cup for Shri Dudh Kumar Mondal.",
-    g4: "Shri Debashish Dhar at the lectern.",
-    g5: "The press, full stage.",
-    g6: "Gunamata Reena J. Sarkar.",
-    g7: "Krishi Ratna League Bengal on the screen.",
-    gv1: "Clip from the hall.",
-    gv2: "Clip from the hall.",
-    gv3: "Clip from the hall.",
-    gv4: "Clip from the hall.",
-    gv5: "Clip from the hall.",
-    gv6: "Clip from the hall.",
-    gv7: "Clip from the hall.",
-    mediaTitle: "In the media",
-    mediaLede: "A running record of the coverage. Clippings, broadcast and video from the morning of 14 September 2026 are added here as they appear.",
-    mediaVidName: "Media Connect, on camera",
-    mediaVidRole: "YouTube · 14 September 2026",
-    mediaVidCap: "Footage from the Media Connect session at Rabindra Okakura Bhawan.",
-    mediaVidLink: "Watch on YouTube",
-    mediaVid2Name: "Media Connect — Interview with Shri Dudh Kumar Mondal",
-    mediaVid2Role: "YouTube · 14 September 2026",
-    mediaVid2Cap: "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, on camera at Rabindra Okakura Bhawan.",
-    mediaVid2Link: "Watch on YouTube",
-    clipTitle: "In print",
-    clipOutlet: "Hello Evening Kolkata · Page 07 · 14 September 2026",
-    clipHead: "Focus on better facilities for Farmers in WB",
-    clipBody: "Reported by Asish Basak on the Hello Kolkata Focus page. The Media Connect session, the Krishi Ratna League announcement, and Smt. Rinku Majumder Ghosh on the holistic development of farmers after her induction as Chief of the Ladies Wing, BKS West Bengal.",
-    clipDl: "Download the page (PDF)",
-    capClip: "Hello Evening Kolkata, page 07, Monday, 14 September 2026.",
-    releaseTitle: "The press release",
-    releaseHead: "Bharatiya Krishak Samaj West Bengal with KarmYog for the 21st Century",
-    releaseBody: "Issued for immediate release. Ref BKS-WB/PR/2026/09-14. Krishi Ratna League launched with AI-driven farmer outreach, Smt. Rinku Majumder Ghosh felicitated as State Adhyaksha, and the Durga Puja 2026 theme Protyabartan unveiled. English and Bangla, two pages.",
-    releaseDl: "Download the press release (PDF)",
-    footOrgs: "Bharatiya Krishak Samaj West Bengal, with KarmYog for the 21st Century.",
-    footPhotos: "Photographs: Bumba and Shubhashis.",
-    footRsvp: "Smt. Reena J. Sarkar +91 98300 24611. Shri Ram Badrinathan +91 91677 19898.",
-    footPlace: "State office: F-127, Downtown Mall, Uniworld City, New Town, Kolkata 700156.",
+    skip: "Skip to the story",
+    brandSub: "BKS WEST BENGAL × KARMYOG",
+    navStory: "The story",
+    navPeople: "The people",
+    menu: "Menu",
+    motionPause: "Pause animations",
+    kolkata: "Kolkata, West Bengal",
+    journal: "THE EVENT JOURNAL — 01",
+    homecoming: "A HOMECOMING. A BEGINNING.",
+    heroLine1: "Back to our roots.",
+    heroLine2: "Forward, together.",
+    heroIntro:
+      "A morning of shared purpose. Farmers, changemakers, and the media come together to open a new chapter for Bengal.",
+    explore: "Step into the story",
+    shortVenue: "Rabindra Okakura Bhawan · Salt Lake, Kolkata",
+    posterLabel: "THE ORIGINAL WELCOME POSTER",
+    posterEdition: "14.09.26 / KOLKATA",
+    rooted: "ROOTED IN BENGAL",
+    scroll: "SCROLL TO DISCOVER ↓",
+    posterCaption:
+      "The original Swagatam welcome poster for the Media Connect session. Printed artwork, preserved as issued.",
+    chapter1: "01 / THE GATHERING",
+    dayDate: "MONDAY, 14 SEPTEMBER",
+    storyTitle: "One morning.\nA shared horizon.",
+    storyIntro:
+      "At Rabindra Okakura Bhawan, a gathering became a beginning. The launch of Krishi Ratna League Bengal, a new chapter for the Mahila Wing, and the unveiling of Protyabartan — the theme for Krishak Samaj Durga Puja 2026.",
+    storyDetail:
+      "Bamboo seats. The sound of a bell. Familiar faces and new conversations. This is the morning, in photographs and moving images.",
+    roomNote: "It began with\na welcome.",
+    onTheDay: "ON THE DAY",
+    programmeLink: "The invitation & programme",
+    printedNote: "The programme as printed on the invitation.",
+    chapter2: "02 / A NEW CHAPTER",
+    launchTitle: "The soil is where\nthe future begins.",
+    krlName: "Krishi Ratna League Bengal",
+    launchCopy:
+      "Introduced by MahAcharya Shri Sourabh J. Sarkar — a new initiative bringing farmers, technology, and community into a shared conversation.",
+    meetVoices: "Hear the voices",
+    pauseMotion: "Pause motion",
+    resumeMotion: "Resume motion",
+    chapter3: "03 / THE PEOPLE",
+    together: "MANY VOICES. SHARED PURPOSE.",
+    peopleTitle: "The faces of\nthis beginning.",
+    peopleIntro:
+      "The people who brought their voices, experience, and commitment to the room.",
+    recognitionKicker: "A MOMENT OF RECOGNITION",
+    recognitionTitle: "A new chapter\nfor the Mahila Wing.",
+    recognitionCopy:
+      "Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal.",
+    seeMoments: "See the moments ↗",
+    hosting: "BRINGING THE ROOM TOGETHER",
+    panelMember: "Press panel",
+    chapter4: "04 / IN THEIR OWN VOICE",
+    filmLabel: "THE VIDEO TESTIMONIAL",
+    filmTitle: "A voice beyond\nthe room.",
+    pause: "Pause",
+    play: "Play",
+    soundOn: "Sound on ↗",
+    soundOff: "Sound off",
+    restart: "From the beginning ↺",
+    viewFilmPoster: "View the testimonial poster ↗",
+    testimonialPoster:
+      "The original promotional poster accompanying Partha S. Chatterjee's video testimonial.",
+    chapter5: "05 / THE VISUAL ARCHIVE",
+    galleryEyebrow: "THE SMALL MOMENTS. THE BIG PICTURE.",
+    galleryHeading: "A day, in frames.",
+    galleryIntro:
+      "From the first greeting to the final conversation. Take a closer look.",
+    filterAll: "All moments",
+    filterPeople: "People",
+    filterStage: "On stage",
+    filterPress: "The press",
+    filterFilms: "In motion",
+    loadMore: "More from the day +",
+    frames: "frames",
+    chapter6: "06 / THE CONVERSATION CONTINUES",
+    pressArchive: "PRESS & COVERAGE",
+    pressHeading: "Beyond the hall.",
+    pressIntro:
+      "The morning, seen through the eyes of the media. Reports, conversations, and the official release.",
+    clipHeadline: "Better facilities.\nBrighter futures for farmers.",
+    readCoverage: "Read the coverage ↗",
+    broadcast: "BROADCAST / YOUTUBE",
+    interview: "INTERVIEW / YOUTUBE",
+    interviewName: "In conversation with\nShri Dudh Kumar Mondal",
+    officialRelease: "OFFICIAL RELEASE / EN + বাংলা",
+    pressDownload: "The press release",
+    closingKicker: "FROM BENGAL. FOR A SHARED TOMORROW.",
+    closingTitle: "The beginning\nof a return.",
+    backTop: "Back to the beginning",
+    getInTouch: "GET IN TOUCH",
+    contactReena: "Smt. Reena J. Sarkar",
+    contactRam: "Shri Ram Badrinathan",
+    stateOffice: "STATE OFFICE",
+    footerEdition: "PROTYABARTAN / SEPTEMBER 2026",
+    close: "Close ×",
+    original: "Open original ↗",
+    previous: "Previous photograph",
+    next: "Next photograph",
+    viewImage: "View photograph",
+    videoClip: "Moving images from the Media Connect",
+    videoUnavailable: "Video unavailable",
+    pageTitle: "Protyabartan · Media Connect · 14 September 2026",
   },
   bn: {
-    navDay: "সেই দিন",
-    navGallery: "গ্যালারি",
-    navPress: "প্রেস",
-    navMedia: "সংবাদমাধ্যম",
-    brand: "মিডিয়া সংযোগ",
-    heroKicker: "১৪ সেপ্টেম্বর ২০২৬",
-    heroTitle: "প্রত্যাবর্তন",
-    heroSub: "রবীন্দ্র ওকাকুরা ভবনে একটি মিডিয়া সংযোগ অনুষ্ঠান. কৃষি রত্ন লীগ বাংলা শুরু.",
-    fDate: "তারিখ",
-    fDateV: "সোমবার, ১৪ সেপ্টেম্বর ২০২৬",
-    fPlace: "স্থান",
-    fPlaceV: "রবীন্দ্র ওকাকুরা ভবন, ডিডি ব্লক, সল্টলেক, কলকাতা",
-    fTheme: "থিম",
-    fThemeV: "প্রত্যাবর্তন, ফিরে আসা",
-    fActs: "সেই সকালে যা ঘোষিত",
-    fActsV: "কৃষি রত্ন লীগ বাংলা. মহিলা শাখা. কৃষক সমাজের দুর্গা পূজা ২০২৬.",
-    inviteTitle: "নিমন্ত্রণপত্র, যেমন ছাপা হয়েছিল",
-    inviteLede: "ইংরেজি ও বাংলায়. ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ এবং কর্মযোগ. ছাপা কার্ডটি সেই সকালের একটি দলিল. এই রচনায় নাম শুধু তাঁদেরই, যাঁরা হলে ছিলেন.",
-    capInviteEn: "ইংরেজি নিমন্ত্রণপত্র. সকাল ৯:৩০. রবীন্দ্র ওকাকুরা ভবন.",
-    capInviteBn: "বাংলা নিমন্ত্রণপত্র. একই সকাল, একই হল.",
-    progTitle: "ছাপা কার্যক্রম",
-    progLede: "যে ক্রমে লেখা হয়েছিল. নিচের ছবিগুলি সেই ঘরকে ধরেছে.",
-    p1t: "০৯:৩০", p1: "পবিত্র সূচনা. কর্মযোগ সেবা মন্ত্র ও বন্দে মাতরম.",
-    p2t: "০৯:৩৫", p2: "স্বাগত ও মঞ্চ আহ্বান. শ্রীমতি রীনা জে. সরকার.",
-    p3t: "০৯:৪০", p3: "ভিডিও সাক্ষ্য. শ্রী পার্থ এস. চ্যাটার্জি, গ্লোবাল অ্যাম্বাসেডর, বি কে এস পশ্চিমবঙ্গ. ড. কৃষণ বীর চৌধুরীর ভিডিও মূল বক্তব্য.",
-    p4t: "০৯:৫০", p4: "মূল দর্শন ও কৃষি রত্ন লীগ বাংলা উদ্বোধন. মহাচার্য শ্রী সৌরভ জে. সরকার.",
-    p5t: "১০:০৫", p5: "শ্রীমতি রিঙ্কু মজুমদার ঘোষের সম্মাননা. অধ্যক্ষা, মহিলা শাখা.",
-    p6t: "১০:১০", p6: "মন্ত্রীর ভাষণ. শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ.",
-    p7t: "১০:২৫", p7: "মূল ভাষণ. শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
-    p8t: "১০:৩৫", p8: "প্রধান অতিথি. শ্রী দেবাশীষ ধর, বিধায়ক, সোনারপুর উত্তর.",
-    p9t: "১০:৪৫", p9: "কৃষক সমাজের দুর্গা পূজা ২০২৬ ঘোষণা. শ্রীমতি রীনা জে. সরকার.",
-    p10t: "১০:৫০", p10: "মিডিয়া প্রশ্ন. মহাচার্য শ্রী সৌরভ জে. সরকার ও শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
-    p11t: "১১:১০", p11: "ধন্যবাদ ও জাতীয় সঙ্গীত. শ্রীমতি রীনা জে. সরকার.",
-    roomTitle: "ঘর",
-    roomLede: "বাঁশ, প্রদীপ, তুলসি, হলুদ কাপড়ে ঢাকা বেদি. প্রথম নমস্কারের আগে ওকাকুরার হল.",
-    capStage: "মঞ্চ. স্বাগত ব্যানার, পূজা, এবং ছাপা নিমন্ত্রণের চার মুখ.",
-    openTitle: "নমস্কার",
-    capOpen: "মহাচার্য শ্রী সৌরভ জে. সরকার বেদিতে. গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল বাঁশের আসনে.",
-    parthaTitle: "ভিডিও সাক্ষ্য",
-    parthaLede: "হলে দেখানো হয় শ্রী পার্থ এস. চ্যাটার্জির সাক্ষ্যচিত্র. তিনি ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের গ্লোবাল অ্যাম্বাসেডর এবং এআই, প্রযুক্তি ও শক্তি রূপান্তরের সিনিয়র অ্যাডভাইজার.",
-    parthaName: "শ্রী পার্থ এস. চ্যাটার্জি",
-    parthaRole: "গ্লোবাল অ্যাম্বাসেডর, বি কে এস পশ্চিমবঙ্গ",
-    capPartha: "ছবির সঙ্গে যে কার্ডটি ছিল. চার মিনিট সাতচল্লিশ সেকেন্ড.",
-    minTitle: "মন্ত্রী",
-    minLede: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ, মিডিয়া সংযোগের সূচনায় মঞ্চে ছিলেন. কৃষি রত্ন লীগ বাংলা সেই ঘরেই নাম পেল.",
-    capMinListen: "বেদিতে মহাচার্য শ্রী সৌরভ জে. সরকার. শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল শুনছেন.",
-    capMinPair: "মঞ্চে শ্রীমতি রিঙ্কু মজুমদার ঘোষ এবং শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী.",
-    capMin: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ.",
-    capMinFeature: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও গুণমাতা রীনা জে. সরকারের সঙ্গে.",
-    rinkuTitle: "অধ্যক্ষা",
-    rinkuLede: "শ্রীমতি রিঙ্কু মজুমদার ঘোষকে ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের মহিলা শাখার অধ্যক্ষা হিসেবে সম্মাননা জানানো হয়. গোলাপি শাড়িতে ব্যাজটি সকালভর ছিল.",
-    capRinku: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
-    capTrio: "গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
-    capBell: "ঘণ্টা. সম্মাননায় দাঁড়ানো. মহাচার্য শ্রী সৌরভ জে. সরকার, গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
-    capRinkuPodium: "বেদিতে শ্রীমতি রিঙ্কু মজুমদার ঘোষ. মূল ভাষণ, ১০:২৫.",
-    dharTitle: "প্রধান অতিথি",
-    dharLede: "শ্রী দেবাশীষ ধর, বিধায়ক, সোনারপুর উত্তর, হলুদ কাপড়ে ঢাকা বেদি থেকে হলকে সম্বোধন করেন.",
-    capDhar: "বেদিতে শ্রী দেবাশীষ ধর.",
-    capGarland: "প্রধান অতিথিকে মালা. হল ছবি তুলছে.",
-    voicesTitle: "মঞ্চ যা বলেছিল",
-    voicesNote: "সেই সকালের যুক্তি, প্রতিটি কণ্ঠে. রেকর্ডিং থেকে ঠিক কথাগুলি পরে বসবে.",
-    v1n: "শ্রী দুধ কুমার মণ্ডল",
-    v1r: "মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ",
-    v1: "কৃষক নীতির পেছনের দৃশ্য নন. কৃষি রত্ন লীগ বাংলার পরের জনপ্রতিযোগিতার কেন্দ্রে ক্ষেতকে রাখে.",
-    v2n: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ",
-    v2r: "অধ্যক্ষা, মহিলা শাখা, ভারতীয় কৃষক সমাজ",
-    v2: "বাংলার ক্ষেতের অর্ধেক একজন নারী. মহিলা শাখা সমাজের পাশের ঘর নয়.",
-    v3n: "শ্রী দেবাশীষ ধর",
-    v3r: "বিধায়ক, সোনারপুর উত্তর",
-    v3: "প্রত্যাবর্তন নস্টালজিয়া নয়. গ্রাম তার সন্তানদের মাটির পাশে দাঁড়াতে বলছে.",
-    v4n: "মহাচার্য শ্রী সৌরভ জে. সরকার",
-    v4r: "রাজ্য সভাপতি, বি কে এস পশ্চিমবঙ্গ. কর্মযোগ আশ্রম",
-    v4: "শেষে একটি কাজ করা খামার নিয়ে লীগ, তাকে তাকের ট্রফি নয়.",
-    hallTitle: "হল",
-    capHall: "প্রেস, কৃষক, দল. রবীন্দ্র ওকাকুরা ভবন.",
-    capLaunch: "পর্দায় কৃষি রত্ন লীগ বাংলার উদ্বোধন. বেদিতে মহাচার্য শ্রী সৌরভ জে. সরকার. আসনে গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
-    pressTitle: "প্রেস আড্ডা",
-    pressLede: "অনুষ্ঠানের পর মাইক্রোফোন এগিয়ে এল. মহাচার্য শ্রী সৌরভ জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ, শ্রী দেবাশীষ ধর, বিধায়ক, এবং গুণমাতা রীনা জে. সরকার একসঙ্গে প্রশ্ন নিলেন. বংলাইভ, ২৪ ঘণ্টা এবং ঘরের বাকিরা শেষ উত্তর পর্যন্ত ছিলেন.",
-    capPanel: "প্রেস প্যানেল. বাঁ দিক থেকে ডান দিকে আসনে: শ্রী রাজীব রায়, গুণমাতা রীনা জে. সরকার, মহাচার্য শ্রী সৌরভ জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক. হলুদ কাপড়ে মাইক.",
-    capHuddle: "ক্যামেরা এগিয়ে. মহাচার্য শ্রী সৌরভ জে. সরকার ঘরের দিকে.",
-    capPressDhar: "মাইকের সামনে শ্রী দেবাশীষ ধর.",
-    capClose: "রবীন্দ্র ওকাকুরা ভবনের বাইরে, সকালের পর.",
-    navGuests: "অতিথি",
-    guestsTitle: "অতিথিবৃন্দ",
-    guestsLede: "প্যানেলে যাঁরা বসেছিলেন, যে ক্রমে বসেছিলেন. পদবি সেই দিনের অনুযায়ী.",
-    gn1: "শ্রী রাজীব রায়",
-    gr1: "",
-    gn2: "গুণমাতা রীনা জে. সরকার",
-    gr2: "চিফ অফ টেকনোলজি, ভারতীয় কৃষক সমাজ. সহ-প্রতিষ্ঠাতা ও সিটিও, কর্মযোগ ফর দ্য টোয়েন্টিফার্স্ট সেঞ্চুরি",
-    gn3: "মহাচার্য শ্রী সৌরভ জে. সরকার",
-    gr3: "রাজ্য সভাপতি, ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ. কর্মযোগ আশ্রম",
-    gn4: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ",
-    gr4: "অধ্যক্ষা, মহিলা শাখা, ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ",
-    gn5: "শ্রী দেবাশীষ ধর",
-    gr5: "বিধায়ক, সোনারপুর উত্তর",
-    capArrival: "রবীন্দ্র ওকাকুরা ভবনে আগমন. হল খোলার আগে শঙ্খ ও ঘণ্টা.",
-    capTrioOutside: "রবীন্দ্র ওকাকুরা ভবনের বাইরে গুণমাতা রীনা জে. সরকার অতিথিদের সঙ্গে.",
-    capGuestsArrival: "হল খোলার আগে রবীন্দ্র ওকাকুরা ভবনের বাইরে অতিথিরা.",
-    capHospitality: "গ্রিন রুমে আপ্যায়ন. অনুষ্ঠানের আগে মাটির কাপে চা.",
-    capHallFront: "সামনের সারি, মন দিয়ে শুনছে. সংবাদমাধ্যম, কৃষক ও সমাজ একসঙ্গে.",
-    galleryTitle: "হল থেকে",
-    galleryLede: "মিডিয়া সংযোগের ছবি ও ক্লিপ. স্বাগত ব্যানারের পেছনে কৃষি রত্ন লীগের ইন্ট্রো চলে.",
-    g1: "মঞ্চ থেকে হলের দিকে.",
-    g2: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ.",
-    g3: "গ্রিন রুম. শ্রী দুধ কুমার মণ্ডলের জন্য মাটির কাপ.",
-    g4: "বেদিতে শ্রী দেবাশীষ ধর.",
-    g5: "প্রেস, পুরো মঞ্চ.",
-    g6: "গুণমাতা রীনা জে. সরকার.",
-    g7: "পর্দায় কৃষি রত্ন লীগ বাংলা.",
-    gv1: "হলের ক্লিপ.",
-    gv2: "হলের ক্লিপ.",
-    gv3: "হলের ক্লিপ.",
-    gv4: "হলের ক্লিপ.",
-    gv5: "হলের ক্লিপ.",
-    gv6: "হলের ক্লিপ.",
-    gv7: "হলের ক্লিপ.",
-    mediaTitle: "সংবাদমাধ্যমে",
-    mediaLede: "সংবাদ-প্রচারের চলমান নথি. ১৪ই সেপ্টেম্বর ২০২৬ সকালের কাগজের কাটিং, সম্প্রচার ও ভিডিও যত প্রকাশিত হবে, এখানেই যুক্ত হবে.",
-    mediaVidName: "ক্যামেরায় মিডিয়া সংযোগ",
-    mediaVidRole: "ইউটিউব · ১৪ সেপ্টেম্বর ২০২৬",
-    mediaVidCap: "রবীন্দ্র ওকাকুরা ভবনে মিডিয়া সংযোগ অনুষ্ঠানের ফুটেজ.",
-    mediaVidLink: "ইউটিউবে দেখুন",
-    mediaVid2Name: "মিডিয়া সংযোগ — শ্রী দুধ কুমার মণ্ডলের সাক্ষাৎকার",
-    mediaVid2Role: "ইউটিউব · ১৪ সেপ্টেম্বর ২০২৬",
-    mediaVid2Cap: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ, রবীন্দ্র ওকাকুরা ভবনে ক্যামেরার সামনে.",
-    mediaVid2Link: "ইউটিউবে দেখুন",
-    clipTitle: "ছাপার অক্ষরে",
-    clipOutlet: "হ্যালো ইভনিং কলকাতা · পৃষ্ঠা ০৭ · ১৪ সেপ্টেম্বর ২০২৬",
-    clipHead: "Focus on better facilities for Farmers in WB",
-    clipBody: "‘হ্যালো কলকাতা ফোকাস’ পাতায় আশিস বসাকের প্রতিবেদন. মিডিয়া সংযোগ অনুষ্ঠান, কৃষি রত্ন লিগের ঘোষণা, এবং ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের মহিলা শাখার প্রধান হিসেবে অভিষেকের পর কৃষকের সার্বিক উন্নয়ন নিয়ে শ্রীমতি রিঙ্কু মজুমদার ঘোষের বক্তব্য.",
-    clipDl: "পৃষ্ঠাটি ডাউনলোড করুন (পিডিএফ)",
-    capClip: "হ্যালো ইভনিং কলকাতা, পৃষ্ঠা ০৭, সোমবার, ১৪ সেপ্টেম্বর ২০২৬.",
-    releaseTitle: "প্রেস বিজ্ঞপ্তি",
-    releaseHead: "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ, কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরির সঙ্গে",
-    releaseBody: "অবিলম্বে প্রকাশের জন্য. স্মারক নং BKS-WB/PR/2026/09-14. এআই-ভিত্তিক কৃষক কল্যাণ উদ্যোগ সহ ‘কৃষি রত্ন লিগ’-এর সূচনা, রাজ্য অধ্যক্ষা হিসেবে শ্রীমতি রিঙ্কু মজুমদার ঘোষকে সংবর্ধনা, এবং দুর্গাপূজা ২০২৬-এর থিম ‘প্রত্যাবর্তন’ উন্মোচন. ইংরেজি ও বাংলা, দুই পৃষ্ঠা.",
-    releaseDl: "প্রেস বিজ্ঞপ্তি ডাউনলোড করুন (পিডিএফ)",
-    footOrgs: "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ, কর্মযোগ ফর দ্য ২১স্ট সেঞ্চুরির সঙ্গে.",
-    footPhotos: "ছবি: বুম্বা এবং শুভাশিস.",
-    footRsvp: "শ্রীমতি রীনা জে. সরকার +৯১ ৯৮৩০০ ২৪৬১১. শ্রী রাম বদ্রীনাথন +৯১ ৯১৬৭৭ ১৯৮৯৮.",
-    footPlace: "রাজ্য কার্যালয়: এফ-১২৭, ডাউনটাউন মল, ইউনিওয়ার্ল্ড সিটি, নিউ টাউন, কলকাতা ৭০০১৫৬.",
+    skip: "মূল গল্পে যান",
+    brandSub: "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ × কর্মযোগ",
+    navStory: "সেই দিনের গল্প",
+    navPeople: "মানুষজন",
+    menu: "মেনু",
+    motionPause: "অ্যানিমেশন থামান",
+    kolkata: "কলকাতা, পশ্চিমবঙ্গ",
+    journal: "অনুষ্ঠানের দিনলিপি — ০১",
+    homecoming: "ফিরে আসা। নতুন পথের শুরু।",
+    heroLine1: "শিকড়ের কাছে ফেরা।",
+    heroLine2: "একসঙ্গে এগিয়ে চলা।",
+    heroIntro:
+      "একটি সকাল, একসঙ্গে পথ চলার অঙ্গীকার। কৃষক, উদ্যোগী মানুষ ও সংবাদমাধ্যমের মিলনে বাংলার এক নতুন অধ্যায়।",
+    explore: "সেই দিনের গল্পে চলুন",
+    shortVenue: "রবীন্দ্র ওকাকুরা ভবন · সল্টলেক, কলকাতা",
+    posterLabel: "অনুষ্ঠানের মূল স্বাগত পোস্টার",
+    posterEdition: "১৪.০৯.২৬ / কলকাতা",
+    rooted: "বাংলার মাটিতে",
+    scroll: "আরও দেখতে নিচে যান ↓",
+    posterCaption:
+      "মিডিয়া সংযোগ অনুষ্ঠানের মূল স্বাগত পোস্টার। প্রকাশিত ছাপা শিল্পকর্মটি অপরিবর্তিত রাখা হয়েছে।",
+    chapter1: "০১ / সমবেত হওয়ার সকাল",
+    dayDate: "সোমবার, ১৪ সেপ্টেম্বর",
+    storyTitle: "একটি সকাল।\nএকই দিগন্তের দিকে।",
+    storyIntro:
+      "রবীন্দ্র ওকাকুরা ভবনে একটি সমাবেশ থেকে শুরু হল নতুন পথচলা। কৃষি রত্ন লীগ বাংলার উদ্বোধন, মহিলা শাখার নতুন অধ্যায় এবং কৃষক সমাজের দুর্গাপূজা ২০২৬-এর থিম ‘প্রত্যাবর্তন’-এর উন্মোচন।",
+    storyDetail:
+      "বাঁশের আসন। ঘণ্টার ধ্বনি। চেনা মুখ, নতুন কথোপকথন। ছবি ও চলমান দৃশ্যে ফিরে দেখা সেই সকাল।",
+    roomNote: "শুরু হয়েছিল\nস্বাগত জানিয়ে।",
+    onTheDay: "সেই দিনের আয়োজন",
+    programmeLink: "নিমন্ত্রণপত্র ও কার্যক্রম",
+    printedNote: "নিমন্ত্রণপত্রে মুদ্রিত অনুষ্ঠানের সূচি।",
+    chapter2: "০২ / একটি নতুন অধ্যায়",
+    launchTitle: "মাটির বুকেই\nআগামীর শুরু।",
+    krlName: "কৃষি রত্ন লীগ বাংলা",
+    launchCopy:
+      "মহাচার্য শ্রী সৌরভ জে. সরকারের উপস্থাপনায় এক নতুন উদ্যোগ — কৃষক, প্রযুক্তি ও সমাজকে একসঙ্গে নিয়ে পথ চলার ভাবনা।",
+    meetVoices: "শুনুন তাঁদের কথা",
+    pauseMotion: "দৃশ্য থামান",
+    resumeMotion: "দৃশ্য চালু করুন",
+    chapter3: "০৩ / মানুষজন",
+    together: "অনেক কণ্ঠ। একসঙ্গে পথ চলা।",
+    peopleTitle: "যাঁদের নিয়ে\nএই পথের শুরু।",
+    peopleIntro:
+      "নিজেদের ভাবনা, অভিজ্ঞতা ও অঙ্গীকার নিয়ে যাঁরা এই সমাবেশে অংশ নিয়েছিলেন।",
+    recognitionKicker: "সম্মাননার একটি মুহূর্ত",
+    recognitionTitle: "মহিলা শাখার\nএকটি নতুন অধ্যায়।",
+    recognitionCopy:
+      "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের মহিলা শাখার অধ্যক্ষা হিসেবে শ্রীমতি রিঙ্কু মজুমদার ঘোষকে সম্মাননা জানানো হয়।",
+    seeMoments: "মুহূর্তগুলি দেখুন ↗",
+    hosting: "যাঁরা সবাইকে একত্র করলেন",
+    panelMember: "প্রেস প্যানেল",
+    chapter4: "০৪ / তাঁদের নিজের কথায়",
+    filmLabel: "ভিডিও সাক্ষ্যচিত্র",
+    filmTitle: "হলের সীমানা পেরিয়ে\nএকটি কণ্ঠ।",
+    pause: "থামান",
+    play: "চালু করুন",
+    soundOn: "শব্দ চালু করুন ↗",
+    soundOff: "শব্দ বন্ধ করুন",
+    restart: "শুরু থেকে দেখুন ↺",
+    viewFilmPoster: "সাক্ষ্যচিত্রের পোস্টার দেখুন ↗",
+    testimonialPoster:
+      "পার্থ এস. চ্যাটার্জির ভিডিও সাক্ষ্যচিত্রের মূল প্রচারমূলক পোস্টার।",
+    chapter5: "০৫ / ছবিতে সেই দিন",
+    galleryEyebrow: "ছোট মুহূর্ত। বড় গল্প।",
+    galleryHeading: "ফ্রেমে ফ্রেমে একটি দিন।",
+    galleryIntro: "প্রথম অভিবাদন থেকে শেষ কথোপকথন। আরও কাছ থেকে দেখুন।",
+    filterAll: "সব মুহূর্ত",
+    filterPeople: "মানুষজন",
+    filterStage: "মঞ্চে",
+    filterPress: "সংবাদমাধ্যম",
+    filterFilms: "চলমান দৃশ্য",
+    loadMore: "সেই দিনের আরও ছবি +",
+    frames: "ফ্রেম",
+    chapter6: "০৬ / কথোপকথন চলতে থাকে",
+    pressArchive: "প্রেস ও সংবাদ",
+    pressHeading: "হলের বাইরেও।",
+    pressIntro:
+      "সংবাদমাধ্যমের চোখে সেই সকাল। প্রতিবেদন, কথোপকথন ও আনুষ্ঠানিক প্রেস বিজ্ঞপ্তি।",
+    clipHeadline: "কৃষকের উন্নত পরিষেবা।\nআরও উজ্জ্বল আগামী।",
+    readCoverage: "প্রতিবেদনটি পড়ুন ↗",
+    broadcast: "সম্প্রচার / ইউটিউব",
+    interview: "সাক্ষাৎকার / ইউটিউব",
+    interviewName: "শ্রী দুধ কুমার মণ্ডলের\nসঙ্গে কথোপকথন",
+    officialRelease: "আনুষ্ঠানিক বিজ্ঞপ্তি / ইংরেজি + বাংলা",
+    pressDownload: "প্রেস বিজ্ঞপ্তি",
+    closingKicker: "বাংলা থেকে। একসঙ্গে আগামীর পথে।",
+    closingTitle: "ফিরে আসার\nএক নতুন শুরু।",
+    backTop: "শুরুতে ফিরে যান",
+    getInTouch: "যোগাযোগ",
+    contactReena: "শ্রীমতি রীনা জে. সরকার",
+    contactRam: "শ্রী রাম বদ্রীনাথন",
+    stateOffice: "রাজ্য কার্যালয়",
+    footerEdition: "প্রত্যাবর্তন / সেপ্টেম্বর ২০২৬",
+    close: "বন্ধ করুন ×",
+    original: "মূল ছবিটি খুলুন ↗",
+    previous: "আগের ছবি",
+    next: "পরের ছবি",
+    viewImage: "ছবিটি দেখুন",
+    videoClip: "মিডিয়া সংযোগ অনুষ্ঠানের চলমান দৃশ্য",
+    videoUnavailable: "ভিডিওটি চালু করা যাচ্ছে না",
+    pageTitle: "প্রত্যাবর্তন — ফিরে আসা, নতুন পথের শুরু।",
   },
 };
 
-function apply(lang) {
-  const pack = T[lang] || T.en;
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (pack[key] != null) el.textContent = pack[key];
+("use strict");
+// Copy is kept separate from interaction logic so both languages stay in sync.
+Object.assign(T.en, EXTRA_COPY.en);
+Object.assign(T.bn, EXTRA_COPY.bn);
+let language = "en";
+try {
+  language = localStorage.getItem("krl-lang") === "bn" ? "bn" : "en";
+} catch {}
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const tr = (key) => T[language][key] ?? T.en[key] ?? key;
+const number = (value) =>
+  new Intl.NumberFormat(language === "bn" ? "bn-IN" : "en-IN", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  }).format(value);
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const videoStates = new WeakMap();
+const lightbox = $("#lightbox");
+let filter = "all";
+let visibleLimit = 12;
+let lastFocus = null;
+let lightboxItems = [];
+let lightboxIndex = 0;
+
+const extras = [
+  {
+    id: "guest1",
+    src: "images/guests-outside-trio.jpg",
+    category: "people",
+    key: "capTrioOutside",
+  },
+  {
+    id: "guest2",
+    src: "images/hospitality.jpg",
+    category: "people",
+    key: "capHospitality",
+  },
+  {
+    id: "guest3",
+    src: "images/arrival-okakura.jpg",
+    category: "people",
+    key: "capArrival",
+  },
+  {
+    id: "guest4",
+    src: "images/rinku-podium.jpg",
+    category: "stage",
+    key: "capRinkuPodium",
+  },
+];
+const clips = Array.from({ length: 7 }, (_, i) => ({
+  id: "v" + (i + 1),
+  src: "video/clip-" + (i + 1) + ".mp4",
+  poster: [
+    "images/opening.jpg",
+    "images/press-huddle.jpg",
+    "images/g-opening.jpg",
+    "images/dhar-podium.jpg",
+    "images/trio.jpg",
+    "images/g-audience.jpg",
+    "images/audience.jpg",
+  ][i],
+  category: "films",
+  video: true,
+  key: "videoClip",
+}));
+const sourceItems = [...ARCHIVE, ...extras, ...clips];
+const firstFrames = [
+  1,
+  28,
+  "v1",
+  4,
+  30,
+  35,
+  36,
+  "v2",
+  55,
+  33,
+  49,
+  11,
+  26,
+  "guest1",
+  "guest2",
+  "guest3",
+  "guest4",
+  "v3",
+  "v4",
+  "v5",
+  "v6",
+  "v7",
+];
+const items = [
+  ...firstFrames.map((id) => sourceItems.find((x) => x.id === id)),
+  ...sourceItems.filter((x) => !firstFrames.includes(x.id)),
+];
+const caption = (item) => (item.key ? tr(item.key) : item[language]);
+const filtered = () =>
+  items.filter((item) => filter === "all" || item.category === filter);
+
+function setText(root = document) {
+  $$("[data-i18n]", root).forEach((el) => {
+    el.textContent = tr(el.dataset.i18n);
   });
-  document.querySelectorAll(".lang button").forEach((b) => {
-    b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+}
+function applyLanguage(lang) {
+  language = lang === "bn" ? "bn" : "en";
+  document.documentElement.lang = language;
+  setText();
+  $$(".lang button").forEach((b) =>
+    b.setAttribute("aria-pressed", String(b.dataset.lang === language)),
+  );
+  $$(".image-open[data-caption]").forEach((b) => {
+    b.setAttribute(
+      "aria-label",
+      tr("viewImage") + ": " + tr(b.dataset.caption),
+    );
+    const img = $("img", b);
+    if (img) img.alt = tr(b.dataset.caption);
   });
-  try { localStorage.setItem("krl-lang", lang); } catch (_) {}
+  $("#lightbox-prev").setAttribute("aria-label", tr("previous"));
+  $("#lightbox-next").setAttribute("aria-label", tr("next"));
+  updateGalleryLabels();
+  $$("video").forEach(syncVideo);
+  if (lightbox.open) showLightboxImage();
+  try {
+    localStorage.setItem("krl-lang", language);
+  } catch {}
+}
+for (let i = 1; i <= 11; i++) {
+  const row = document.createElement("div");
+  const time = document.createElement("time");
+  time.dataset.i18n = "p" + i + "t";
+  const text = document.createElement("p");
+  text.dataset.i18n = "p" + i;
+  row.style.setProperty("--programme-row", i - 1);
+  row.append(time, text);
+  $("#programme-list").append(row);
 }
 
-const start = (() => {
-  try { return localStorage.getItem("krl-lang") || "en"; } catch (_) { return "en"; }
-})();
-apply(start);
-
-document.querySelectorAll(".lang button").forEach((b) => {
-  b.addEventListener("click", () => apply(b.dataset.lang));
-});
-
-const heroVideo = document.querySelector(".hero-video");
-if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  heroVideo.pause();
-  heroVideo.removeAttribute("autoplay");
+function syncVideo(video) {
+  const surface = video.closest(".video-surface");
+  if (surface) {
+    const pause = $(".video-pause", surface);
+    if (pause) {
+      pause.dataset.i18n = video.paused ? "play" : "pause";
+      pause.textContent = tr(pause.dataset.i18n);
+      pause.disabled = !!video.error;
+    }
+    const sound = $(".video-sound", surface);
+    if (sound) {
+      sound.dataset.i18n = video.muted ? "soundOn" : "soundOff";
+      sound.textContent = tr(sound.dataset.i18n);
+      sound.setAttribute("aria-pressed", String(!video.muted));
+    }
+  } else if (video.closest(".launch-section")) {
+    const button = $(".ambient-toggle");
+    button.dataset.i18n = video.paused ? "resumeMotion" : "pauseMotion";
+    button.textContent = tr(button.dataset.i18n);
+    button.setAttribute("aria-pressed", String(video.paused));
+  }
 }
-
-// Guest carousel. Native scroll-snap does the moving; this only drives the
-// arrows, the counter and the arrow keys, so a swipe still works with JS off.
-document.querySelectorAll("[data-carousel]").forEach((root) => {
-  const track = root.querySelector("[data-carousel-track]");
-  const prev = root.querySelector("[data-carousel-prev]");
-  const next = root.querySelector("[data-carousel-next]");
-  const indexOut = root.querySelector("[data-carousel-index]");
-  const totalOut = root.querySelector("[data-carousel-total]");
-  if (!track) return;
-
-  const slides = Array.from(track.children);
-  if (!slides.length) return;
-  if (totalOut) totalOut.textContent = String(slides.length);
-
-  const current = () => {
-    const mid = track.scrollLeft + track.clientWidth / 2;
-    let best = 0;
-    let bestGap = Infinity;
-    slides.forEach((s, i) => {
-      const gap = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid);
-      if (gap < bestGap) { bestGap = gap; best = i; }
+function loadVideo(video) {
+  if (!video.getAttribute("src") && video.dataset.src) {
+    video.src = video.dataset.src;
+    video.load();
+  }
+}
+async function playVideo(video, manual = false) {
+  const state = videoStates.get(video);
+  if (!state) return;
+  if (manual) {
+    state.userPaused = false;
+    state.manual = true;
+  }
+  if (
+    state.userPaused ||
+    document.hidden ||
+    lightbox.open ||
+    (!manual &&
+      document.documentElement.classList.contains("motion-off")) ||
+    (!manual && reducedMotion.matches && !state.manual)
+  )
+    return;
+  loadVideo(video);
+  try {
+    await video.play();
+  } catch {
+    syncVideo(video);
+  }
+}
+const videoObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target,
+        state = videoStates.get(video);
+      state.visible = entry.isIntersecting && entry.intersectionRatio >= 0.12;
+      if (state.visible) playVideo(video);
+      else video.pause();
     });
-    return best;
-  };
+  },
+  { threshold: [0, 0.12, 0.4] },
+);
 
-  const go = (i) => {
-    const target = slides[Math.max(0, Math.min(slides.length - 1, i))];
-    if (target) track.scrollTo({ left: target.offsetLeft, behavior: "smooth" });
-  };
-
-  const sync = () => {
-    const i = current();
-    if (indexOut) indexOut.textContent = String(i + 1);
-    if (prev) prev.disabled = i === 0;
-    if (next) next.disabled = i === slides.length - 1;
-  };
-
-  if (prev) prev.addEventListener("click", () => go(current() - 1));
-  if (next) next.addEventListener("click", () => go(current() + 1));
-
-  track.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
-    if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+function setupVideo(video) {
+  if (videoStates.has(video)) return;
+  video.muted = true;
+  videoStates.set(video, { visible: false, userPaused: false, manual: false });
+  ["play", "pause", "volumechange", "loadeddata"].forEach((event) =>
+    video.addEventListener(event, () => syncVideo(video)),
+  );
+  video.addEventListener("error", () => {
+    syncVideo(video);
+    const surface = video.closest(".video-surface");
+    if (surface && !$(".video-error", surface)) {
+      const note = document.createElement("span");
+      note.className = "video-error";
+      note.dataset.i18n = "videoUnavailable";
+      note.textContent = tr("videoUnavailable");
+      surface.append(note);
+    }
   });
-
-  let raf = 0;
-  track.addEventListener("scroll", () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(sync);
-  }, { passive: true });
-  window.addEventListener("resize", sync);
-  sync();
+  videoObserver.observe(video);
+  syncVideo(video);
+}
+function toggleVideo(video) {
+  if (video.paused) playVideo(video, true);
+  else {
+    videoStates.get(video).userPaused = true;
+    video.pause();
+  }
+}
+document.addEventListener("click", (event) => {
+  const pause = event.target.closest(".video-pause");
+  const sound = event.target.closest(".video-sound");
+  const restart = event.target.closest(".video-restart");
+  if (pause) toggleVideo($("video", pause.closest(".video-surface")));
+  if (sound) {
+    const video = $("video", sound.closest(".video-surface"));
+    const enable = video.muted;
+    if (enable)
+      $$("video").forEach((other) => {
+        if (other !== video) other.muted = true;
+      });
+    video.muted = !enable;
+    if (enable) playVideo(video, true);
+  }
+  if (restart) {
+    const video = $("video", restart.closest(".video-surface"));
+    loadVideo(video);
+    video.currentTime = 0;
+    playVideo(video, true);
+  }
 });
+$(".ambient-toggle").addEventListener("click", () =>
+  toggleVideo($(".launch-backdrop video")),
+);
+document.addEventListener("visibilitychange", () => {
+  $$("video").forEach((video) => {
+    if (document.hidden) video.pause();
+    else if (videoStates.get(video)?.visible) playVideo(video);
+  });
+});
+reducedMotion.addEventListener("change", () => {
+  $$("video").forEach((video) => {
+    if (reducedMotion.matches) {
+      videoStates.get(video).manual = false;
+      video.pause();
+    } else if (videoStates.get(video)?.visible) playVideo(video);
+  });
+});
+document.addEventListener("motionchange", (event) => {
+  $$("video").forEach((video) => {
+    if (!event.detail.enabled) video.pause();
+    else if (videoStates.get(video)?.visible) playVideo(video);
+  });
+});
+
+function videoElement(item) {
+  const surface = document.createElement("div");
+  surface.className = "video-surface";
+  const video = document.createElement("video");
+  Object.assign(video, {
+    autoplay: true,
+    muted: true,
+    loop: true,
+    playsInline: true,
+    preload: "none",
+    poster: item.poster,
+  });
+  video.dataset.src = item.src;
+  video.setAttribute("aria-label", caption(item));
+  const actions = document.createElement("div");
+  actions.className = "video-actions";
+  [
+    ["video-pause", "play"],
+    ["video-sound", "soundOn"],
+  ].forEach(([className, key]) => {
+    const button = document.createElement("button");
+    button.className = className;
+    button.dataset.i18n = key;
+    button.textContent = tr(key);
+    actions.append(button);
+  });
+  surface.append(video, actions);
+  return surface;
+}
+function renderGallery(append = false) {
+  const grid = $("#gallery-grid");
+  if (!append) {
+    $$("video", grid).forEach((video) => {
+      video.pause();
+      videoObserver.unobserve(video);
+      video.removeAttribute("src");
+      video.load();
+    });
+    grid.replaceChildren();
+  }
+  const list = filtered();
+  const start = append ? grid.children.length : 0;
+  list.slice(start, visibleLimit).forEach((item) => {
+    const figure = document.createElement("figure");
+    figure.className = "gallery-item";
+    figure.dataset.id = String(item.id);
+    if (item.video) figure.append(videoElement(item));
+    else {
+      const button = document.createElement("button");
+      button.className = "image-open";
+      button.dataset.galleryId = String(item.id);
+      const img = document.createElement("img");
+      img.src = item.src;
+      img.alt = caption(item);
+      img.loading = "lazy";
+      img.decoding = "async";
+      const expand = document.createElement("span");
+      expand.className = "image-expand";
+      expand.textContent = "↗";
+      expand.setAttribute("aria-hidden", "true");
+      button.append(img, expand);
+      figure.append(button);
+    }
+    const figcaption = document.createElement("figcaption");
+    const index = document.createElement("span");
+    index.className = "frame-number";
+    const text = document.createElement("span");
+    text.className = "frame-caption";
+    figcaption.append(index, text);
+    figure.append(figcaption);
+    grid.append(figure);
+  });
+  $$("video", grid).forEach(setupVideo);
+  updateGalleryLabels();
+}
+function updateGalleryLabels() {
+  const list = filtered();
+  $$(".gallery-item").forEach((figure, i) => {
+    const item = items.find((x) => String(x.id) === figure.dataset.id);
+    $(".frame-number", figure).textContent = number(i + 1);
+    $(".frame-caption", figure).textContent = caption(item);
+    const img = $("img", figure);
+    if (img) img.alt = caption(item);
+    const button = $(".image-open", figure);
+    if (button)
+      button.setAttribute("aria-label", tr("viewImage") + ": " + caption(item));
+    const video = $("video", figure);
+    if (video) video.setAttribute("aria-label", caption(item));
+  });
+  $("#gallery-count").textContent =
+    number(Math.min(visibleLimit, list.length)) +
+    " / " +
+    number(list.length) +
+    " " +
+    tr("frames");
+  $("#load-more").hidden = visibleLimit >= list.length;
+}
+$$("[data-filter]").forEach((button) =>
+  button.addEventListener("click", () => {
+    filter = button.dataset.filter;
+    visibleLimit = 12;
+    $$("[data-filter]").forEach((b) =>
+      b.setAttribute("aria-pressed", String(b === button)),
+    );
+    renderGallery();
+  }),
+);
+$("#load-more").addEventListener("click", () => {
+  visibleLimit += 12;
+  renderGallery(true);
+});
+
+function showLightboxImage() {
+  const item = lightboxItems[lightboxIndex];
+  const label = item.key ? tr(item.key) : caption(item);
+  $("#lightbox-image").src = item.src;
+  $("#lightbox-image").alt = label;
+  $("#lightbox-caption").textContent = label;
+  $("#lightbox-original").href = item.src;
+  $("#lightbox-counter").textContent =
+    number(lightboxIndex + 1) + " / " + number(lightboxItems.length);
+  $("#lightbox-prev").disabled = lightboxIndex === 0;
+  $("#lightbox-next").disabled = lightboxIndex === lightboxItems.length - 1;
+}
+function stepLightbox(step) {
+  lightboxIndex = Math.max(
+    0,
+    Math.min(lightboxItems.length - 1, lightboxIndex + step),
+  );
+  showLightboxImage();
+}
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".image-open");
+  if (!button) return;
+  lastFocus = button;
+  if (button.dataset.galleryId) {
+    lightboxItems = filtered().filter((x) => !x.video);
+    lightboxIndex = lightboxItems.findIndex(
+      (x) => String(x.id) === button.dataset.galleryId,
+    );
+  } else {
+    lightboxItems = [
+      { src: button.dataset.image, key: button.dataset.caption },
+    ];
+    lightboxIndex = 0;
+  }
+  showLightboxImage();
+  document.body.classList.add("modal-open");
+  $$("video").forEach((video) => video.pause());
+  lightbox.showModal();
+  $("#lightbox-close").focus();
+});
+$("#lightbox-close").addEventListener("click", () => lightbox.close());
+$("#lightbox-prev").addEventListener("click", () => stepLightbox(-1));
+$("#lightbox-next").addEventListener("click", () => stepLightbox(1));
+lightbox.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    stepLightbox(-1);
+  }
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    stepLightbox(1);
+  }
+});
+lightbox.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  lastFocus?.focus({ preventScroll: true });
+  $$("video").forEach((video) => {
+    if (videoStates.get(video)?.visible) playVideo(video);
+  });
+});
+let touchX = 0;
+$("#lightbox-image").addEventListener(
+  "touchstart",
+  (event) => {
+    touchX = event.changedTouches[0].clientX;
+  },
+  { passive: true },
+);
+$("#lightbox-image").addEventListener(
+  "touchend",
+  (event) => {
+    const delta = event.changedTouches[0].clientX - touchX;
+    if (Math.abs(delta) > 60) stepLightbox(delta < 0 ? 1 : -1);
+  },
+  { passive: true },
+);
+
+const menuButton = $(".menu-toggle");
+function closeMenu() {
+  menuButton.setAttribute("aria-expanded", "false");
+  $("#mobile-nav").hidden = true;
+}
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") !== "true";
+  menuButton.setAttribute("aria-expanded", String(open));
+  $("#mobile-nav").hidden = !open;
+});
+$$("#mobile-nav a").forEach((link) =>
+  link.addEventListener("click", closeMenu),
+);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+$$(".lang button").forEach((button) =>
+  button.addEventListener("click", () => applyLanguage(button.dataset.lang)),
+);
+
+let progressQueued = false;
+function updateProgress() {
+  const distance = document.documentElement.scrollHeight - window.innerHeight;
+  $(".reading-progress").style.transform =
+    "scaleX(" +
+    (distance > 0 ? Math.min(1, window.scrollY / distance) : 0) +
+    ")";
+  const sections = ["day", "guests", "gallery", "media"];
+  let active = "";
+  sections.forEach((id) => {
+    if (
+      document.getElementById(id).getBoundingClientRect().top <
+      window.innerHeight * 0.4
+    )
+      active = id;
+  });
+  $$("header nav a").forEach((link) => {
+    const selected = link.hash === "#" + active;
+    link.classList.toggle("active", selected);
+    if (selected) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+  progressQueued = false;
+}
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!progressQueued) {
+      progressQueued = true;
+      requestAnimationFrame(updateProgress);
+    }
+  },
+  { passive: true },
+);
+window.addEventListener("resize", updateProgress);
+renderGallery();
+$$("video").forEach(setupVideo);
+applyLanguage(language);
+updateProgress();
