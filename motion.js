@@ -43,6 +43,16 @@ const revealSelector = [
   ".programme",
   ".launch-name",
   ".launch-bottom p",
+  ".launch-story .narrative > p",
+  ".league-number",
+  ".launch-quote",
+  ".acceptance-portrait",
+  ".acceptance-layout .narrative > p",
+  ".acceptance-body",
+  ".acceptance-quote blockquote",
+  ".puja-layout figure",
+  ".puja-layout .narrative > p",
+  ".next-doors article",
   ".person",
   ".recognition > *",
   ".hosts > *",
@@ -115,7 +125,8 @@ if (programme) {
 }
 
 function animateCharacters() {
-  const title = document.querySelector(".hero h1");
+  const title = document.querySelector(".protyabartan-reveal");
+  if (!title) return;
   const text = title.textContent.trim();
   title.setAttribute("aria-label", text);
   title.replaceChildren(
@@ -252,7 +263,8 @@ document.querySelector(".hero").addEventListener("pointerleave", () => {
   );
 });
 
-const sections = ["top", "day", "launch", "guests", "film", "gallery", "media"];
+const sections = ["top", "day", "launch", "acceptance", "guests", "film", "puja", "gallery", "media"];
+document.querySelector(".chapter-rail-total").textContent = String(sections.length - 1).padStart(2, "0");
 function updateMotionScroll() {
   const scrollY = window.scrollY;
   const viewport = window.innerHeight;
@@ -301,6 +313,14 @@ if (typeof originalLanguageApply === "function") {
 registerReveals();
 registerInteractive();
 animateCharacters();
+const wordmarkObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("wordmark-visible");
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.25 });
+wordmarkObserver.observe(document.querySelector(".puja-wordmark"));
 updateMotionScroll();
 
 const finishIntro = () =>

@@ -48,7 +48,7 @@ const EXTRA_COPY = {
     recognitionKicker: "A MOMENT OF RECOGNITION",
     recognitionTitle: "A new chapter\nfor the Mahila Wing.",
     recognitionCopy:
-      "Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal.",
+      "Smt. Rinku Majumder Ghosh was felicitated as Adhyakshaa of the Mahila Wing, Bharatiya Krishak Samaj West Bengal.",
     seeMoments: "See the moments ↗",
     hosting: "BRINGING THE ROOM TOGETHER",
     panelMember: "Press panel",
@@ -94,15 +94,15 @@ const EXTRA_COPY = {
     contactReena: "Smt. Reena J. Sarkar",
     contactRam: "Shri Ram Badrinathan",
     stateOffice: "STATE OFFICE",
-    footerEdition: "PROTYABARTAN / SEPTEMBER 2026",
+    footerEdition: "KRISHI RATNA LEAGUE BENGAL / SEPTEMBER 2026",
     close: "Close ×",
     original: "Open original ↗",
     previous: "Previous photograph",
     next: "Next photograph",
     viewImage: "View photograph",
-    videoClip: "Moving images from the Media Connect",
+    videoClip: "Media Connect film",
     videoUnavailable: "Video unavailable",
-    pageTitle: "Protyabartan · Media Connect · 14 September 2026",
+    pageTitle: "Krishi Ratna League Bengal · Media Connect · 14 September 2026",
   },
   bn: {
     skip: "মূল গল্পে যান",
@@ -206,7 +206,7 @@ const EXTRA_COPY = {
     viewImage: "ছবিটি দেখুন",
     videoClip: "মিডিয়া সংযোগ অনুষ্ঠানের চলমান দৃশ্য",
     videoUnavailable: "ভিডিওটি চালু করা যাচ্ছে না",
-    pageTitle: "প্রত্যাবর্তন — ফিরে আসা, নতুন পথের শুরু।",
+    pageTitle: "কৃষি রত্ন লীগ বাংলা · মিডিয়া সংযোগ · ১৪ সেপ্টেম্বর ২০২৬",
   },
 };
 
@@ -214,6 +214,8 @@ const EXTRA_COPY = {
 // Copy is kept separate from interaction logic so both languages stay in sync.
 Object.assign(T.en, EXTRA_COPY.en);
 Object.assign(T.bn, EXTRA_COPY.bn);
+Object.assign(T.en, EDITORIAL_COPY.en);
+Object.assign(T.bn, EDITORIAL_COPY.bn);
 let language = "en";
 try {
   language = localStorage.getItem("krl-lang") === "bn" ? "bn" : "en";
@@ -275,7 +277,7 @@ const clips = Array.from({ length: 7 }, (_, i) => ({
   ][i],
   category: "films",
   video: true,
-  key: "videoClip",
+  key: "clipCaption" + (i + 1),
 }));
 const sourceItems = [...ARCHIVE, ...extras, ...clips];
 const firstFrames = [
@@ -318,7 +320,9 @@ function setText(root = document) {
 function applyLanguage(lang) {
   language = lang === "bn" ? "bn" : "en";
   document.documentElement.lang = language;
+  document.title = tr("pageTitle");
   setText();
+  updateInvitationLabels();
   $$(".lang button").forEach((b) =>
     b.setAttribute("aria-pressed", String(b.dataset.lang === language)),
   );
@@ -628,6 +632,9 @@ document.addEventListener("click", (event) => {
     lightboxIndex = lightboxItems.findIndex(
       (x) => String(x.id) === button.dataset.galleryId,
     );
+  } else if (button.closest(".invitation-pair")) {
+    lightboxItems = $$(".invitation-pair .image-open").map(b => ({src:b.dataset.image,key:b.dataset.caption}));
+    lightboxIndex = lightboxItems.findIndex(item => item.src === button.dataset.image);
   } else {
     lightboxItems = [
       { src: button.dataset.image, key: button.dataset.caption },
@@ -635,12 +642,21 @@ document.addEventListener("click", (event) => {
     lightboxIndex = 0;
   }
   showLightboxImage();
+  setLightboxZoom(Boolean(button.closest(".invitation-pair")) && window.innerWidth < 760);
   document.body.classList.add("modal-open");
   $$("video").forEach((video) => video.pause());
   lightbox.showModal();
   $("#lightbox-close").focus();
 });
 $("#lightbox-close").addEventListener("click", () => lightbox.close());
+function setLightboxZoom(zoomed) {
+  lightbox.classList.toggle("is-zoomed", zoomed);
+  $("#lightbox-zoom").setAttribute("aria-pressed", String(zoomed));
+  $("#lightbox-zoom").dataset.i18n = zoomed ? "zoomOut" : "zoomIn";
+  $("#lightbox-zoom").textContent = tr(zoomed ? "zoomOut" : "zoomIn");
+  $(".lightbox-image-viewport").scrollTo(0,0);
+}
+$("#lightbox-zoom").addEventListener("click", () => setLightboxZoom(!lightbox.classList.contains("is-zoomed")));
 $("#lightbox-prev").addEventListener("click", () => stepLightbox(-1));
 $("#lightbox-next").addEventListener("click", () => stepLightbox(1));
 lightbox.addEventListener("keydown", (event) => {
@@ -732,6 +748,49 @@ window.addEventListener(
   { passive: true },
 );
 window.addEventListener("resize", updateProgress);
+
+// Invitations stay full-width. Native scrolling supports touch and trackpads;
+// buttons and arrow keys provide the same choice without a gesture.
+const invitationTrack = $(".invitation-pair");
+const invitationButtons = $$("[data-invitation]");
+let invitationIndex = 0;
+let invitationScrollFrame = 0;
+function updateInvitationLabels() {
+  if (typeof invitationIndex === "undefined") return;
+  $(".invitation-prev").setAttribute("aria-label", tr("invitationPrevious"));
+  $(".invitation-next").setAttribute("aria-label", tr("invitationNext"));
+  $(".invitation-status").textContent = number(invitationIndex + 1) + " / " + number(2);
+  $(".invitation-prev").disabled = invitationIndex === 0;
+  $(".invitation-next").disabled = invitationIndex === 1;
+  invitationButtons.forEach((b, i) => b.setAttribute("aria-pressed", String(i === invitationIndex)));
+  $(".invitation-original").href = invitationTrack.children[invitationIndex].dataset.image;
+}
+function selectInvitation(index, instant = false) {
+  invitationIndex = Math.max(0, Math.min(1, index));
+  invitationTrack.scrollTo({ left: invitationIndex * invitationTrack.clientWidth, behavior: instant || reducedMotion.matches ? "instant" : "smooth" });
+  updateInvitationLabels();
+}
+invitationButtons.forEach((button) => button.addEventListener("click", () => selectInvitation(Number(button.dataset.invitation))));
+$(".invitation-prev").addEventListener("click", () => selectInvitation(invitationIndex - 1));
+$(".invitation-next").addEventListener("click", () => selectInvitation(invitationIndex + 1));
+invitationTrack.addEventListener("keydown", (event) => {
+  if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+  event.preventDefault();
+  selectInvitation(invitationIndex + (event.key === "ArrowRight" ? 1 : -1));
+});
+invitationTrack.addEventListener("scroll", () => {
+  if (invitationScrollFrame) return;
+  invitationScrollFrame = requestAnimationFrame(() => {
+    invitationIndex = Math.round(invitationTrack.scrollLeft / Math.max(1, invitationTrack.clientWidth));
+    invitationIndex = Math.max(0, Math.min(1, invitationIndex));
+    updateInvitationLabels();
+    invitationScrollFrame = 0;
+  });
+}, { passive: true });
+window.addEventListener("resize", () => selectInvitation(invitationIndex, true));
+$(".programme").addEventListener("toggle", () => {
+  if ($(".programme").open) selectInvitation(invitationIndex, true);
+});
 renderGallery();
 $$("video").forEach(setupVideo);
 applyLanguage(language);

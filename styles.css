@@ -2778,7 +2778,7 @@ body:hover .cursor-orbit {
 }
 
 .recognition::after {
-  content: "প্রত্যাবর্তন";
+  content: none;
   position: absolute;
   z-index: -1;
   right: -3vw;
@@ -3094,4 +3094,132 @@ body:hover .cursor-orbit {
 .press-links a:hover,
 .press-links a:hover .eyebrow {
   color: var(--eggshell);
+}
+
+/* The League leads; the Homecoming wordmark belongs to the Puja chapter. */
+.quote-ribbon { width: 100%; margin-inline: 0; transform: none; }
+.hero-title { transform: none; }
+.hero h1, html[lang="bn"] .hero h1 {
+  display: block;
+  overflow: visible;
+  font-size: clamp(44px, 7.5vw, 116px);
+  line-height: 1.13;
+  letter-spacing: -0.055em;
+}
+.hero h1 > span { display: block; }
+.hero-region { color: var(--muted); }
+.hero-copy h2, html[lang="bn"] .hero-copy h2 {
+  font-size: clamp(23px, 2.3vw, 34px);
+  line-height: 1.4;
+  margin-top: 28px;
+}
+.hero-copy > .eyebrow { line-height: 1.8; }
+.narrative { min-width: 0; }
+.narrative p, .acceptance-body {
+  font-family: var(--sans);
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.8;
+  margin: 0 0 1.5em;
+}
+.launch-content { padding-block: 70px 100px; }
+.launch-heading { margin: 70px 0 44px; }
+.launch-heading > .eyebrow { color: var(--olive); }
+.launch-content h2 { margin: 20px 0 0; max-width: 950px; }
+.launch-story { display: grid; grid-template-columns: 1.35fr 0.65fr; gap: clamp(35px, 8vw, 120px); }
+.launch-story .narrative { max-width: 720px; }
+.launch-intent { border-left: 2px solid var(--olive); padding-left: 24px; }
+.league-number { align-self: start; padding-block: 8px 25px; border-top: 1px solid rgb(243 232 211 / .3); }
+.league-number strong { display: block; font: 400 clamp(64px, 8vw, 122px)/1.2 var(--serif); color: var(--olive); }
+.league-number > span { font-size: 17px; }
+.league-path { padding: 28px 0 0; margin: 0; list-style-position: inside; }
+.league-path li { padding: 14px 0; border-bottom: 1px solid rgb(243 232 211 / .25); font-size: 15px; }
+.launch-quote { margin: 50px 0; padding-top: 40px; border-top: 1px solid rgb(243 232 211 / .3); }
+.launch-quote blockquote { max-width: 1020px; margin: 0; font: 400 clamp(28px, 3.2vw, 48px)/1.4 Georgia, serif; }
+.launch-quote figcaption { margin-top: 25px; font-size: 14px; color: var(--olive); }
+.launch-backdrop::after { background: linear-gradient(90deg, rgb(19 50 21 / .98), rgb(19 50 21 / .92) 65%, rgb(19 50 21 / .82)); }
+.acceptance-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: clamp(30px, 6vw, 90px); margin: 60px 0; align-items: start; }
+.acceptance-portrait { margin: 0; }
+.acceptance-portrait img { aspect-ratio: 3 / 4; object-fit: cover; }
+.acceptance-portrait figcaption { display: grid; gap: 6px; margin-top: 18px; font-size: 13px; }
+.acceptance-layout h2 { font-size: clamp(35px, 4vw, 62px); margin: 0 0 25px; }
+.acceptance-body { margin: 30px 0 0; padding-left: 24px; border-left: 2px solid var(--olive); font-family: Outfit, sans-serif; }
+.acceptance-quote { margin: 0; padding: clamp(24px, 5vw, 72px); background: var(--phthalo); color: var(--eggshell); }
+.acceptance-quote blockquote { margin: 0; font: 400 clamp(26px, 3.4vw, 50px)/1.42 Georgia, serif; }
+.acceptance-quote figcaption { display: grid; gap: 5px; margin-top: 36px; max-width: 620px; font-size: 14px; }
+.acceptance-quote figcaption b { font-weight: 500; }
+.acceptance-quote figcaption span { color: var(--olive); margin-top: 8px; }
+[lang="bn"] { font-family: Bengali, var(--sans); }
+.puja-section { background: color-mix(in srgb, var(--eggshell) 82%, var(--olive)); }
+.puja-section > .eyebrow { display: block; margin-top: 45px; }
+.puja-wordmark { margin: 30px 0 60px; }
+.protyabartan-reveal { font: 400 clamp(42px, 8.7vw, 140px)/1.2 Georgia, serif; letter-spacing: -.055em; margin: 0; }
+.puja-wordmark .bengali-signature { position: static; display: block; transform: none; color: var(--muted); margin-top: 12px; }
+.puja-wordmark .hero-char { animation: none; transform: none; opacity: 1; }
+.motion-on .puja-wordmark:not(.wordmark-visible) .hero-char { opacity: 0; transform: translateY(20px); }
+.motion-on .puja-wordmark.wordmark-visible .hero-char { opacity: 0; transform: translateY(20px); animation: char-rise .8s ease forwards; animation-delay: calc(var(--char-index) * 35ms); }
+.puja-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 76px); align-items: start; }
+.puja-layout figure { margin: 0; }
+.puja-layout figcaption { font-size: 13px; margin-top: 14px; }
+.puja-layout h2 { font-size: clamp(34px, 3.2vw, 50px); margin: 0 0 25px; }
+.puja-invitation { border-top: 1px solid var(--line); padding-top: 24px; }
+.next-steps { background: var(--phthalo); color: var(--eggshell); }
+.next-steps .section-label { border-color: rgb(243 232 211 / .25); }
+.next-steps h2 { margin-top: 50px; }
+.next-doors { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 50px; }
+.next-doors article { padding: 0 30px 20px; border-left: 1px solid rgb(243 232 211 / .25); }
+.next-doors article:first-child { padding-left: 0; border: 0; }
+.next-doors h3 { font: 400 36px/1.2 var(--serif); margin: 18px 0; }
+.next-doors .eyebrow { color: var(--olive); }
+.next-doors a { display: block; width: fit-content; margin-top: 14px; border-bottom: 1px solid rgb(243 232 211 / .4); font-size: 15px; }
+.ambient-toggle, .video-actions button, .gallery-count, .invitation-controls, .invitation-tabs, .invitation-hint {
+  font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: .02em;
+}
+
+/* A single invitation fills the available width, including on phones. */
+.invitation-carousel { margin: 20px 0 45px; padding: clamp(12px, 2vw, 28px); border: 1px solid var(--line); background: color-mix(in srgb, var(--eggshell) 88%, white); }
+.invitation-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.invitation-tabs button { min-height: 44px; padding: 10px 20px; border: 1px solid var(--line); border-radius: 24px; }
+.invitation-tabs button[aria-pressed="true"] { color: var(--eggshell); background: var(--phthalo); }
+.invitation-carousel .invitation-pair { display: flex; gap: 0; max-width: none; margin: 0; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.invitation-pair::-webkit-scrollbar { display: none; }
+.invitation-carousel .invitation-pair > button { flex: 0 0 100%; width: 100%; scroll-snap-align: start; scroll-snap-stop: always; box-shadow: none; animation: none; transform: none; }
+.invitation-carousel .invitation-pair img { width: 100%; height: auto; object-fit: contain; transform: none; }
+.invitation-controls { display: flex; align-items: center; gap: 15px; margin-top: 18px; }
+.invitation-controls button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); font-size: 22px; }
+.invitation-controls button:hover { color: var(--eggshell); background: var(--phthalo); }
+.invitation-controls button:disabled { opacity: .35; cursor: default; }
+.invitation-original { margin-left: auto; border-bottom: 1px solid currentColor; padding: 8px 0; }
+.invitation-hint { color: var(--muted); margin: 14px 0 0; line-height: 1.6; }
+#lightbox-original { font-size: 15px; padding: 12px 18px; border: 1px solid currentColor; border-radius: 24px; }
+.lightbox-image-viewport { width: 100%; height: 100%; min-width: 0; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.lightbox-image-viewport img { display: block; width: 100%; height: 100%; object-fit: contain; }
+#lightbox.is-zoomed .lightbox-image-viewport img { width: max(100%, 1200px); height: auto; max-width: none; max-height: none; object-fit: initial; animation: none; }
+#lightbox-zoom { border: 1px solid currentColor; border-radius: 24px; }
+
+@media (max-width: 760px) {
+  .launch-story, .acceptance-layout, .puja-layout { grid-template-columns: 1fr; }
+  .launch-heading { margin-top: 75px; }
+  .launch-content h2 { font-size: clamp(40px, 8vw, 65px); }
+  .launch-content { padding-block: 40px 60px; }
+  .ambient-toggle { top: 35px; }
+  .league-number { max-width: 100%; }
+  .league-number strong { font-size: 76px; }
+  .acceptance-portrait { max-width: 420px; }
+  .acceptance-layout { margin: 35px 0; }
+  .acceptance-body { padding-left: 18px; }
+  .next-doors { grid-template-columns: 1fr; }
+  .next-doors article, .next-doors article:first-child { padding: 26px 0; border: 0; border-top: 1px solid rgb(243 232 211 / .25); }
+  .hero-title { margin-block: 30px; }
+  .hero h1, html[lang="bn"] .hero h1 { font-size: clamp(39px, 8vw, 62px); letter-spacing: -.05em; }
+  .hero-copy h2, html[lang="bn"] .hero-copy h2 { font-size: 25px; }
+  .invitation-carousel { margin-inline: -10px; padding: 10px; }
+  .invitation-tabs button { padding: 9px 15px; }
+  .invitation-controls { gap: 10px; flex-wrap: wrap; }
+  .invitation-original { font-size: 13px; }
+  .programme-content > .muted { font-size: 15px; }
+  .puja-section .section-label { align-items: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .invitation-carousel .invitation-pair { scroll-behavior: auto; }
+  .puja-wordmark .hero-char { animation: none !important; opacity: 1 !important; transform: none !important; }
 }

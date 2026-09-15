@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Protyabartan · Media Connect · 14 September 2026</title>
+    <title>Krishi Ratna League Bengal · Media Connect · 14 September 2026</title>
     <meta
       name="description"
       content="Bharatiya Krishak Samaj West Bengal Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal. 14 September 2026."
@@ -11,11 +11,11 @@
     <meta name="theme-color" content="#133215" />
     <meta
       property="og:title"
-      content="Protyabartan · Media Connect · 14 September 2026"
+      content="Krishi Ratna League Bengal · Media Connect · 14 September 2026"
     />
     <meta
       property="og:image"
-      content="https://krl-media-connect.vercel.app/images/og.jpg"
+      content="https://krl-media-connect-bengal-2026.vercel.app/images/og.jpg"
     />
     <link rel="icon" href="images/bks-seal.jpg" />
     <link
@@ -28,20 +28,21 @@
     <link rel="stylesheet" href="styles.css?v=journal-1" />
     <script src="content.js?v=journal-1" defer></script>
     <script src="archive.js?v=journal-1" defer></script>
+    <script src="editorial.js?v=krl-2" defer></script>
     <script src="app.js?v=journal-1" defer></script>
     <script src="motion.js?v=motion-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#day" data-i18n="skip">Skip to the story</a>
     <div class="page-intro" aria-hidden="true">
-      <span class="page-intro-word">প্রত্যাবর্তন</span>
+      <span class="page-intro-word">কৃষি রত্ন লীগ</span>
       <i></i>
     </div>
     <div class="cursor-orbit" aria-hidden="true"><span>↗</span></div>
     <aside class="chapter-rail" aria-label="Story progress">
       <span class="chapter-rail-number">00</span>
       <i></i>
-      <span class="chapter-rail-total">06</span>
+      <span class="chapter-rail-total">08</span>
     </aside>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Media Connect home"
@@ -96,28 +97,24 @@
           ><span data-i18n="journal">THE EVENT JOURNAL — 01</span>
         </div>
         <div class="hero-title">
-          <h1 data-i18n="heroTitle">Protyabartan</h1>
-          <span class="bengali-signature" lang="bn" aria-hidden="true"
-            >প্রত্যাবর্তন</span
-          >
+          <h1><span data-i18n="heroTitle">Krishi Ratna League</span><span class="hero-region" data-i18n="heroRegion">Bengal</span></h1>
         </div>
         <div class="hero-layout">
           <div class="hero-copy">
-            <span class="eyebrow" data-i18n="fThemeV"
-              >Protyabartan, the homecoming</span
+            <span class="eyebrow" data-i18n="eventName"
+              >Media Connect Session &amp; Agri-Innovation Convening</span
             >
             <h2>
               <span data-i18n="heroSub"
-                >A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna
-                League Bengal begins.</span
+                >On 14 September 2026, at Rabindra Okakura Bhawan, Bharatiya Krishak Samaj West Bengal placed the Krishi Ratna League before Bengal: 5,000 farmers, trained in Smart Farming and Integrated Farming Systems, then judged in open competition.</span
               >
             </h2>
             <p data-i18n="fActsV">
               KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.
             </p>
-            <a class="round-link" href="#day"
+            <a class="round-link" href="#launch"
               ><span class="circle-arrow">↘</span
-              ><span data-i18n="navDay">The day</span></a
+              ><span data-i18n="krlName">Krishi Ratna League Bengal</span></a
             >
             <div class="hero-location">
               <span class="location-icon" aria-hidden="true">⌖</span
@@ -180,8 +177,7 @@
           <div>
             <p class="intro-text" data-i18n="inviteLede">
               Issued in English and Bangla from Bharatiya Krishak Samaj West
-              Bengal and KarmYog. The card is an artefact of the morning. Body
-              copy of this essay names only those who were in the hall.
+              Bengal and KarmYog.
             </p>
             <p class="muted" data-i18n="roomLede">
               Bamboo, diya, tulsi, a yellow cloth on the lectern. The hall at
@@ -238,7 +234,12 @@
             ><span class="details-icon">+</span>
           </summary>
           <div class="programme-content">
-            <div class="invitation-pair">
+            <div class="invitation-carousel" role="region" aria-label="Invitations" aria-roledescription="carousel">
+            <div class="invitation-tabs" role="group" aria-label="Invitation language">
+              <button type="button" data-invitation="0" aria-pressed="true" data-i18n="invitationEn">English invitation</button>
+              <button type="button" data-invitation="1" aria-pressed="false" data-i18n="invitationBn">বাংলা invitation</button>
+            </div>
+            <div class="invitation-pair" id="invitation-slides" tabindex="0">
               <button
                 class="image-open"
                 data-image="images/archive-print/01-print-invitation-english.jpg"
@@ -261,8 +262,16 @@
                 /><span class="image-expand">↗</span>
               </button>
             </div>
+            <div class="invitation-controls">
+              <button type="button" class="invitation-prev" aria-label="Previous invitation" aria-controls="invitation-slides">←</button>
+              <span class="invitation-status" aria-live="polite">01 / 02</span>
+              <button type="button" class="invitation-next" aria-label="Next invitation" aria-controls="invitation-slides">→</button>
+              <a class="invitation-original" href="images/archive-print/01-print-invitation-english.jpg" target="_blank" rel="noopener" data-i18n="invitationZoom">Read full-size ↗</a>
+            </div>
+            <p class="invitation-hint" data-i18n="invitationHint">Swipe to change language · Tap the card to enlarge</p>
+            </div>
             <p class="muted" data-i18n="progLede">
-              The order as issued. Photographs below carry the live room.
+              The order as issued.
             </p>
             <div id="programme-list"></div>
           </div>
@@ -282,25 +291,32 @@
           ></video>
         </div>
         <div class="launch-content">
-          <span class="eyebrow" data-i18n="chapter2">02 / A NEW CHAPTER</span>
-          <h2 class="display" data-i18n="fActsV">
-            KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.
-          </h2>
-          <div class="launch-bottom">
-            <div>
-              <span class="launch-name" data-i18n="krlName"
-                >Krishi Ratna League Bengal</span
-              >
-              <p data-i18n="p4">
-                Foundational vision and KRL Bengal launch. MahAcharya Shri
-                Sourabh J. Sarkar.
-              </p>
-            </div>
-            <a class="round-link" href="#film"
-              ><span class="circle-arrow">↘</span
-              ><span data-i18n="voicesTitle">What the stage carried</span></a
-            >
+          <span class="eyebrow" data-i18n="chapter2">02 / THE LAUNCH</span>
+          <div class="launch-heading">
+            <span class="eyebrow" data-i18n="launchKicker">KRISHI RATNA LEAGUE — BENGAL</span>
+            <h2 class="display" data-i18n="krlName">Krishi Ratna League Bengal</h2>
           </div>
+          <div class="launch-story">
+            <div class="narrative">
+              <p data-i18n="launchAnnounced">Announced from the stage at 09:50 by MahAcharya Shri Sourabh J. Sarkar, and placed before Bengal by Smt. Rinku Majumder Ghosh in her acceptance address.</p>
+              <p data-i18n="launchBody">Across West Bengal, the League will mobilise and train 5,000 farmers in global cutting-edge Smart Farming and Integrated Farming Systems (IFS). The training is structured. What follows it is a competition — objective, transparent — and the finest performers are conferred prestigious awards.</p>
+              <p class="launch-intent" data-i18n="launchIntent">The intent is plain: that a farmer's skill should be measured in the open, and recognised in the open.</p>
+            </div>
+            <aside class="league-number" aria-label="5,000 farmers">
+              <strong data-i18n="farmerCount">5,000</strong>
+              <span data-i18n="farmerCountLabel">farmers across West Bengal</span>
+              <ol class="league-path">
+                <li data-i18n="leagueTrain">Structured training</li>
+                <li data-i18n="leagueCompete">Transparent competition</li>
+                <li data-i18n="leagueRecognise">Prestigious awards</li>
+              </ol>
+            </aside>
+          </div>
+          <figure class="launch-quote">
+            <blockquote lang="en">“From this sacred platform, I place before the people of Bengal our flagship initiative: the Krishi Ratna League.”</blockquote>
+            <figcaption data-i18n="launchAttribution">— Smt. Rinku Majumder Ghosh, Adhyakshaa, Mahila Wing, BKS West Bengal</figcaption>
+          </figure>
+          <a class="round-link" href="#puja"><span class="circle-arrow">↘</span><span data-i18n="voicesTitle">What was announced</span></a>
         </div>
         <button
           class="ambient-toggle"
@@ -311,9 +327,29 @@
         </button>
       </section>
 
+      <section class="section-pad acceptance-section" id="acceptance">
+        <div class="section-label"><span data-i18n="chapterAcceptance">03 / THE ACCEPTANCE</span><span data-i18n="acceptanceKicker">THE BACKBONE OF BENGAL</span></div>
+        <div class="acceptance-layout">
+          <figure class="acceptance-portrait">
+            <button class="image-open" data-image="images/rinku-podium.jpg" data-caption="capRinkuPodium"><img src="images/rinku-podium.jpg" alt="Smt. Rinku Majumder Ghosh at the lectern" loading="lazy" /><span class="image-expand">↗</span></button>
+            <figcaption><span lang="en">Smt. Rinku Majumder Ghosh</span><span lang="bn">শ্রীমতী রিঙ্কু মজুমদার ঘোষ</span></figcaption>
+          </figure>
+          <div class="narrative">
+            <h2 class="display" data-i18n="acceptanceTitle">Empowering women in smart farming</h2>
+            <p data-i18n="acceptanceIntro">Smt. Rinku Majumder Ghosh accepted the office of Adhyakshaa, Mahila Wing, Bharatiya Krishak Samaj West Bengal, and delivered the acceptance address that named the League.</p>
+            <blockquote class="acceptance-body" lang="en">“I firmly declare that in West Bengal, our mothers and sisters are the true backbone of the agricultural ecosystem. From sunrise to sunset — from dawn until dusk — they toil relentlessly in the fields, battling alongside the soil and nurturing our crops with unmatched devotion. Yet, with the very same grace, they manage their homes, care for their elders and children, and shoulder total family responsibility.”</blockquote>
+          </div>
+        </div>
+        <figure class="acceptance-quote">
+          <blockquote lang="en">“Our mothers and sisters are the true backbone of agriculture. As Women's Wing President, my resolution is clear: in Bengal's upcoming agrarian renaissance, our women farmers will not remain in the background — they will lead from the front with complete social dignity, modern technical training, and financial independence.”</blockquote>
+          <!-- The verbatim Bengali pair awaits the matching release PDF; do not substitute a translation. -->
+          <figcaption><b lang="en">Smt. Rinku Majumder Ghosh</b><b lang="bn">শ্রীমতী রিঙ্কু মজুমদার ঘোষ</b><span lang="en">Adhyakshaa (State President), Mahila Wing · Bharatiya Krishak Samaj, West Bengal</span><span lang="bn">অধ্যক্ষা (রাজ্য সভাপতি), মহিলা শাখা · ভারতীয় কৃষক সমাজ, পশ্চিমবঙ্গ</span></figcaption>
+        </figure>
+      </section>
+
       <section class="section-pad people-section" id="guests">
         <div class="section-label">
-          <span data-i18n="chapter3">03 / THE PEOPLE</span
+          <span data-i18n="chapter3">04 / THE PEOPLE</span
           ><span data-i18n="together">MANY VOICES. SHARED PURPOSE.</span>
         </div>
         <div class="section-heading">
@@ -387,11 +423,11 @@
             </button>
           </figure>
           <div>
-            <span class="eyebrow" data-i18n="rinkuTitle">Adhyaksha</span
+            <span class="eyebrow" data-i18n="rinkuTitle">Adhyakshaa</span
             >
             <h3 data-i18n="v2n">Smt. Rinku Majumder Ghosh</h3>
             <p data-i18n="rinkuLede">
-              Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the
+              Smt. Rinku Majumder Ghosh was felicitated as Adhyakshaa of the
               Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat
               on the pink sari for the rest of the morning.
             </p>
@@ -402,7 +438,7 @@
         </div>
         <div class="hosts">
           <span class="eyebrow" data-i18n="voicesTitle"
-            >What the stage carried</span
+            >What was announced</span
           >
           <div>
             <h3 data-i18n="gn3"></h3>
@@ -420,7 +456,7 @@
 
       <section class="film-section section-pad" id="film">
         <div class="section-label">
-          <span data-i18n="chapter4">04 / IN THEIR OWN VOICE</span
+          <span data-i18n="chapter4">05 / IN THEIR OWN VOICE</span
           ><span data-i18n="filmLabel">THE VIDEO TESTIMONIAL</span>
         </div>
         <div class="film-heading">
@@ -477,9 +513,25 @@
         </div>
       </div>
 
+      <section class="section-pad puja-section" id="puja">
+        <div class="section-label"><span data-i18n="chapterPuja">06 / ROOTS TO POSSIBILITIES</span><span data-i18n="pujaAnnounced">Announced by Smt. Reena J. Sarkar at 10:45.</span></div>
+        <span class="eyebrow" data-i18n="pujaKicker">PROTYABARTAN · প্রত্যাবর্তন · THE HOMECOMING</span>
+        <div class="puja-wordmark"><p class="protyabartan-reveal" lang="en">Protyabartan</p><span class="bengali-signature" lang="bn">প্রত্যাবর্তন</span></div>
+        <div class="puja-layout">
+          <figure><button class="image-open" data-image="images/archive-photos/p49-closing-variant.jpg" data-caption="pujaCaption"><img src="images/archive-photos/p49-closing-variant.jpg" alt="Krishak Samaj Durga Puja theme announcement" loading="lazy" /><span class="image-expand">↗</span></button><figcaption data-i18n="pujaCaption">The Protyabartan theme is unveiled: a three-year trilogy for Krishak Samaj Durga Puja.</figcaption></figure>
+          <div class="narrative">
+            <h2 class="display" data-i18n="pujaTitle">Krishak Samaj Durga Puja 2026</h2>
+            <p data-i18n="pujaBody1">At Sector V (Munshi Bheri, Salt Lake), Krishak Samaj Durga Puja 2026 will carry a comprehensive live model of the Krishi Ratna League — a working integrated farm, built on the pandal ground.</p>
+            <p data-i18n="pujaBody2">It will demonstrate how modern agrarian techniques unlock extraordinary productivity from compact landholdings: a sapling guided from seed to harvest to direct market linkage, generating farm surplus and lifting rural households into genuine prosperity.</p>
+            <p data-i18n="pujaBody3">Protyabartan is a three-year trilogy. Its core philosophy is Roots to Possibilities, and Possibilities to Prosperity.</p>
+            <p class="puja-invitation" data-i18n="pujaInvite">Visitors are invited, with their families, to Sector V during Sharodotsav to see the integrated farm model first-hand.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="gallery-section section-pad" id="gallery">
         <div class="section-label">
-          <span data-i18n="chapter5">05 / THE VISUAL ARCHIVE</span
+          <span data-i18n="chapter5">07 / THE VISUAL ARCHIVE</span
           ><span data-i18n="galleryEyebrow"
             >THE SMALL MOMENTS. THE BIG PICTURE.</span
           >
@@ -533,7 +585,7 @@
 
       <section class="press-section section-pad" id="media">
         <div class="section-label">
-          <span data-i18n="chapter6">06 / THE CONVERSATION CONTINUES</span
+          <span data-i18n="chapter6">08 / THE CONVERSATION CONTINUES</span
           ><span data-i18n="pressArchive">PRESS & COVERAGE</span>
         </div>
         <div class="section-heading">
@@ -594,21 +646,13 @@
           >
         </div>
       </section>
-      <section class="closing">
-        <img
-          src="images/g-outside.jpg"
-          alt="The gathering outside Rabindra Okakura Bhawan"
-          loading="lazy"
-        />
-        <div>
-          <span class="eyebrow" data-i18n="capClose"
-            >Outside Rabindra Okakura Bhawan after the morning.</span
-          >
-          <h2 data-i18n="fThemeV">Protyabartan, the homecoming</h2>
-          <a href="#top" class="round-link"
-            ><span class="circle-arrow">↑</span
-            ><span data-i18n="backTop">Back to the beginning</span></a
-          >
+      <section class="section-pad next-steps" id="connect" aria-labelledby="connect-title">
+        <div class="section-label"><span data-i18n="nextKicker">THE NEXT STEP</span><span data-i18n="krlName">Krishi Ratna League Bengal</span></div>
+        <h2 class="display" id="connect-title" data-i18n="nextTitle">Continue the conversation.</h2>
+        <div class="next-doors">
+          <article><span class="eyebrow">01</span><h3 data-i18n="doorPress">Press</h3><p data-i18n="contactRam">Shri Ram Badrinathan</p><a href="mailto:ram@ky21c.org">ram@ky21c.org ↗</a><a href="tel:+919167719898">+91 91677 19898</a></article>
+          <article><span class="eyebrow">02</span><h3 data-i18n="doorFarmers">Farmers</h3><p data-i18n="farmerDoor">Krishi Ratna League training</p><a href="#launch" data-i18n="farmerRead">Explore the League ↗</a><!-- Registration link awaits Ram's confirmed destination. --></article>
+          <article><span class="eyebrow">03</span><h3 data-i18n="doorVisit">Visit</h3><p data-i18n="visitDoor">Sector V · Durga Puja 2026</p><a href="#puja" data-i18n="visitRead">Discover the integrated farm ↗</a></article>
         </div>
       </section>
     </main>
@@ -642,18 +686,19 @@
       </div>
       <div class="footer-bottom">
         <span data-i18n="footPhotos"></span
-        ><span data-i18n="footerEdition">PROTYABARTAN / SEPTEMBER 2026</span
+        ><span data-i18n="footerEdition">KRISHI RATNA LEAGUE BENGAL / SEPTEMBER 2026</span
         ><span lang="bn">মাটির টানে, মানুষের পাশে।</span>
       </div>
     </footer>
     <dialog id="lightbox" aria-labelledby="lightbox-caption">
       <div class="lightbox-top">
-        <span id="lightbox-counter"></span
-        ><button id="lightbox-close" data-i18n="close">Close ×</button>
+        <span id="lightbox-counter"></span>
+        <button id="lightbox-zoom" type="button" aria-pressed="false" data-i18n="zoomIn">Zoom in +</button>
+        <button id="lightbox-close" data-i18n="close">Close ×</button>
       </div>
       <div class="lightbox-stage">
         <button id="lightbox-prev" aria-label="Previous photograph">←</button
-        ><img id="lightbox-image" alt="" /><button
+        ><div class="lightbox-image-viewport" tabindex="0"><img id="lightbox-image" alt="" /></div><button
           id="lightbox-next"
           aria-label="Next photograph"
         >

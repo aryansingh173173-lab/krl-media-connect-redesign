@@ -14,8 +14,10 @@ vm.runInContext(
     "\n" +
     read("archive.js") +
     "\n" +
+    read("editorial.js") +
+    "\n" +
     app.split("// Copy is kept separate")[0] +
-    "\nthis.copy = { en: {...T.en,...EXTRA_COPY.en}, bn: {...T.bn,...EXTRA_COPY.bn} }; this.archive = ARCHIVE;",
+    "\nthis.copy = { en: {...T.en,...EXTRA_COPY.en,...EDITORIAL_COPY.en}, bn: {...T.bn,...EXTRA_COPY.bn,...EDITORIAL_COPY.bn} }; this.archive = ARCHIVE;",
   ctx,
 );
 const keys = [...html.matchAll(/data-(?:i18n|caption)="([^"]+)"/g)].map(
@@ -39,7 +41,7 @@ const refs = [
 refs.push(...ctx.archive.map((item) => item.src));
 for (let i = 1; i <= 7; i++) refs.push(`video/clip-${i}.mp4`);
 for (const ref of refs) {
-  if (/^(https?:|tel:|#)/.test(ref)) continue;
+  if (/^(https?:|tel:|mailto:|#)/.test(ref)) continue;
   assert.ok(
     fs.existsSync(path.join(root, ref.split("?")[0])),
     `Missing asset: ${ref}`,

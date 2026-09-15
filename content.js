@@ -6,9 +6,9 @@ const T = {
     navMedia: "Media",
     brand: "Media Connect",
     heroKicker: "14 September 2026",
-    heroTitle: "Protyabartan",
+    heroTitle: "Krishi Ratna League",
     heroSub:
-      "A Media Connect at Rabindra Okakura Bhawan. Krishi Ratna League Bengal begins.",
+      "On 14 September 2026, at Rabindra Okakura Bhawan, Bharatiya Krishak Samaj West Bengal placed the Krishi Ratna League before Bengal: 5,000 farmers, trained in Smart Farming and Integrated Farming Systems, then judged in open competition.",
     fDate: "Date",
     fDateV: "Monday, 14 September 2026",
     fPlace: "Venue",
@@ -19,11 +19,11 @@ const T = {
     fActsV: "KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.",
     inviteTitle: "The invitation, as printed",
     inviteLede:
-      "Issued in English and Bangla from Bharatiya Krishak Samaj West Bengal and KarmYog. The card is an artefact of the morning. Body copy of this essay names only those who were in the hall.",
+      "Issued in English and Bangla from Bharatiya Krishak Samaj West Bengal and KarmYog.",
     capInviteEn: "English invitation. 9:30 AM. Rabindra Okakura Bhawan.",
     capInviteBn: "Bengali invitation. Same morning, same hall.",
     progTitle: "The printed programme",
-    progLede: "The order as issued. Photographs below carry the live room.",
+    progLede: "The order as issued.",
     p1t: "09:30",
     p1: "Sacred opening. KarmYog Seva Mantra and Vande Mataram.",
     p2t: "09:35",
@@ -33,7 +33,7 @@ const T = {
     p4t: "09:50",
     p4: "Foundational vision and KRL Bengal launch. MahAcharya Shri Sourabh J. Sarkar.",
     p5t: "10:05",
-    p5: "Felicitation of Smt. Rinku Majumder Ghosh, Adhyaksha, Mahila Wing.",
+    p5: "Felicitation of Smt. Rinku Majumder Ghosh, Adhyakshaa, Mahila Wing.",
     p6t: "10:10",
     p6: "Ministerial address. Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
     p7t: "10:25",
@@ -72,9 +72,9 @@ const T = {
       "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal.",
     capMinFeature:
       "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, with Smt. Rinku Majumder Ghosh and Gunamata Reena J. Sarkar.",
-    rinkuTitle: "Adhyaksha",
+    rinkuTitle: "Adhyakshaa",
     rinkuLede:
-      "Smt. Rinku Majumder Ghosh was felicitated as Adhyaksha of the Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat on the pink sari for the rest of the morning.",
+      "Smt. Rinku Majumder Ghosh was felicitated as Adhyakshaa of the Mahila Wing, Bharatiya Krishak Samaj West Bengal. The badge sat on the pink sari for the rest of the morning.",
     capRinku: "Smt. Rinku Majumder Ghosh.",
     capTrio:
       "Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
@@ -87,14 +87,14 @@ const T = {
       "Shri Debashish Dhar, MLA, Sonarpur Uttar, addressed the hall from the yellow-draped lectern.",
     capDhar: "Shri Debashish Dhar at the lectern.",
     capGarland: "A garland on the Guest of Honour. The hall photographing.",
-    voicesTitle: "What the stage carried",
+    voicesTitle: "What was announced",
     voicesNote:
       "The argument of the morning, in each voice. Exact words from the recordings will replace these lines.",
     v1n: "Shri Dudh Kumar Mondal",
     v1r: "Hon'ble Minister of Agriculture, West Bengal",
     v1: "The farmer is not a backdrop to policy. Krishi Ratna League puts the field at the centre of Bengal's next public contest.",
     v2n: "Smt. Rinku Majumder Ghosh",
-    v2r: "Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj",
+    v2r: "Adhyakshaa, Mahila Wing, Bharatiya Krishak Samaj",
     v2: "Half of Bengal's farm is a woman. The Mahila Wing is not a side room of the Samaj.",
     v3n: "Shri Debashish Dhar",
     v3r: "MLA, Sonarpur Uttar",
@@ -125,7 +125,7 @@ const T = {
     gn3: "MahAcharya Shri Sourabh J. Sarkar",
     gr3: "State President, Bharatiya Krishak Samaj West Bengal. KarmYog Ashram",
     gn4: "Smt. Rinku Majumder Ghosh",
-    gr4: "Adhyaksha, Mahila Wing, Bharatiya Krishak Samaj West Bengal",
+    gr4: "Adhyakshaa, Mahila Wing, Bharatiya Krishak Samaj West Bengal",
     gn5: "Shri Debashish Dhar",
     gr5: "MLA, Sonarpur Uttar",
     capArrival:
@@ -179,7 +179,7 @@ const T = {
     releaseHead:
       "Bharatiya Krishak Samaj West Bengal with KarmYog for the 21st Century",
     releaseBody:
-      "Issued for immediate release. Ref BKS-WB/PR/2026/09-14. Krishi Ratna League launched with AI-driven farmer outreach, Smt. Rinku Majumder Ghosh felicitated as State Adhyaksha, and the Durga Puja 2026 theme Protyabartan unveiled. English and Bangla, two pages.",
+      "Issued for immediate release. Ref BKS-WB/PR/2026/09-14. Krishi Ratna League launched with AI-driven farmer outreach, Smt. Rinku Majumder Ghosh felicitated as State Adhyakshaa, and the Durga Puja 2026 theme Protyabartan unveiled. English and Bangla, two pages.",
     releaseDl: "Download the press release (PDF)",
     footOrgs:
       "Bharatiya Krishak Samaj West Bengal, with KarmYog for the 21st Century.",
@@ -196,7 +196,7 @@ const T = {
     navMedia: "সংবাদমাধ্যম",
     brand: "মিডিয়া সংযোগ",
     heroKicker: "১৪ সেপ্টেম্বর ২০২৬",
-    heroTitle: "প্রত্যাবর্তন",
+    heroTitle: "কৃষি রত্ন লীগ",
     heroSub:
       "রবীন্দ্র ওকাকুরা ভবনে একটি মিডিয়া সংযোগ অনুষ্ঠান. কৃষি রত্ন লীগ বাংলা শুরু.",
     fDate: "তারিখ",
@@ -209,11 +209,11 @@ const T = {
     fActsV: "কৃষি রত্ন লীগ বাংলা. মহিলা শাখা. কৃষক সমাজের দুর্গা পূজা ২০২৬.",
     inviteTitle: "নিমন্ত্রণপত্র, যেমন ছাপা হয়েছিল",
     inviteLede:
-      "ইংরেজি ও বাংলায়. ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ এবং কর্মযোগ. ছাপা কার্ডটি সেই সকালের একটি দলিল. এই রচনায় নাম শুধু তাঁদেরই, যাঁরা হলে ছিলেন.",
+      "ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ ও কর্মযোগের প্রকাশিত ইংরেজি ও বাংলা নিমন্ত্রণপত্র।",
     capInviteEn: "ইংরেজি নিমন্ত্রণপত্র. সকাল ৯:৩০. রবীন্দ্র ওকাকুরা ভবন.",
     capInviteBn: "বাংলা নিমন্ত্রণপত্র. একই সকাল, একই হল.",
     progTitle: "ছাপা কার্যক্রম",
-    progLede: "যে ক্রমে লেখা হয়েছিল. নিচের ছবিগুলি সেই ঘরকে ধরেছে.",
+    progLede: "প্রকাশিত অনুষ্ঠানের ক্রম।",
     p1t: "০৯:৩০",
     p1: "পবিত্র সূচনা. কর্মযোগ সেবা মন্ত্র ও বন্দে মাতরম.",
     p2t: "০৯:৩৫",
@@ -273,7 +273,7 @@ const T = {
       "শ্রী দেবাশীষ ধর, বিধায়ক, সোনারপুর উত্তর, হলুদ কাপড়ে ঢাকা বেদি থেকে হলকে সম্বোধন করেন.",
     capDhar: "বেদিতে শ্রী দেবাশীষ ধর.",
     capGarland: "প্রধান অতিথিকে মালা. হল ছবি তুলছে.",
-    voicesTitle: "মঞ্চ যা বলেছিল",
+    voicesTitle: "যা ঘোষণা করা হল",
     voicesNote:
       "সেই সকালের যুক্তি, প্রতিটি কণ্ঠে. রেকর্ডিং থেকে ঠিক কথাগুলি পরে বসবে.",
     v1n: "শ্রী দুধ কুমার মণ্ডল",
