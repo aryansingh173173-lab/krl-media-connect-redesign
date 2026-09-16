@@ -3336,3 +3336,21 @@ body:hover .cursor-orbit {
   .hero .poster-display { margin: 0 8px 0 0; }
   .hero > .hero-bottom { margin-inline: 22px; }
 }
+
+/* Show the portrait film intact, with copy beside it rather than over the logo. */
+.hero-scene { min-height: clamp(720px, calc(100svh - 90px), 940px); }
+.hero-backdrop { inset: 76px var(--pad) 115px auto; width: 40%; z-index: 0; }
+.hero-backdrop video { object-fit: contain; object-position: center; }
+.hero-backdrop::after { content: none; }
+.hero-scene .hero-topline, .hero-scene .hero-title, .hero-scene-bottom { position: relative; z-index: 1; }
+.hero-scene .hero-title { width: 55%; padding-top: 100px; margin-block: auto; }
+.hero-scene h1, html[lang="bn"] .hero-scene h1 { font-size: clamp(56px, 6.5vw, 100px); }
+@media (max-width: 760px) {
+  .hero-scene { min-height: 0; gap: 24px; }
+  .hero-scene .hero-topline { order: 1; }
+  .hero-backdrop { order: 2; position: relative; inset: auto; width: 100%; height: min(70svh, 620px); flex: none; }
+  .hero-backdrop video { object-position: center; }
+  .hero-scene .hero-title { order: 3; width: 100%; padding: 0; margin: 0; }
+  .hero-scene h1, html[lang="bn"] .hero-scene h1 { font-size: clamp(46px, 12vw, 78px); }
+  .hero-scene-bottom { order: 4; }
+}
