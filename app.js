@@ -36,7 +36,7 @@ const EXTRA_COPY = {
     launchTitle: "The soil is where\nthe future begins.",
     krlName: "Krishi Ratna League Bengal",
     launchCopy:
-      "Introduced by MahAcharya Shri Sourabh J. Sarkar — a new initiative bringing farmers, technology, and community into a shared conversation.",
+      "Introduced by MahAcharya Shri. sourabh J. sarkar — a new initiative bringing farmers, technology, and community into a shared conversation.",
     meetVoices: "Hear the voices",
     pauseMotion: "Pause motion",
     resumeMotion: "Resume motion",
@@ -141,7 +141,7 @@ const EXTRA_COPY = {
     launchTitle: "মাটির বুকেই\nআগামীর শুরু।",
     krlName: "কৃষি রত্ন লীগ বাংলা",
     launchCopy:
-      "মহাচার্য শ্রী সৌরভ জে. সরকারের উপস্থাপনায় এক নতুন উদ্যোগ — কৃষক, প্রযুক্তি ও সমাজকে একসঙ্গে নিয়ে পথ চলার ভাবনা।",
+      "MahAcharya Shri. sourabh J. sarkar-এর উপস্থাপনায় এক নতুন উদ্যোগ — কৃষক, প্রযুক্তি ও সমাজকে একসঙ্গে নিয়ে পথ চলার ভাবনা।",
     meetVoices: "শুনুন তাঁদের কথা",
     pauseMotion: "দৃশ্য থামান",
     resumeMotion: "দৃশ্য চালু করুন",

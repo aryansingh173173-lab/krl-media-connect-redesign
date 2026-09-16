@@ -28,6 +28,35 @@
   font-weight: 600 800;
   font-display: swap;
 }
+/* Editorial additions keep the existing palette and typography. */
+.committee-section { border-bottom: 1px solid var(--line); }
+.committee-roster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; padding: 0; margin: 2rem 0 0; list-style: none; counter-reset: committee; }
+.committee-roster li { counter-increment: committee; display: flex; gap: 1.2rem; align-items: baseline; padding: 1.2rem 0; border-top: 1px solid var(--line); font-size: clamp(18px, 1.8vw, 25px); }
+.committee-roster li::before { content: counter(committee, decimal-leading-zero); color: var(--muted); font: 400 12px var(--sans); flex: 0 0 1.5rem; }
+.minister-feature { background: var(--phthalo); color: var(--eggshell); padding: clamp(24px, 4vw, 64px); margin: 0 0 clamp(60px, 7vw, 110px); display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 2.5rem 4rem; scroll-margin-top: 120px; }
+.minister-heading { grid-column: 1 / -1; }
+.minister-heading .eyebrow { color: var(--olive); }
+.minister-heading h2, .attendance-section h2 { font: 400 clamp(32px, 4vw, 58px)/1.15 var(--serif); margin: 1rem 0 0; letter-spacing: -.035em; }
+.minister-portrait { margin: 0; }
+.minister-portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.minister-portrait figcaption { color: var(--eggshell); opacity: .85; font-size: 13px; margin-top: 14px; line-height: 1.6; }
+.minister-words { align-self: center; min-width: 0; }
+.minister-words blockquote { margin: 0; font-size: clamp(19px, 1.8vw, 25px); line-height: 1.65; }
+.minister-words .minister-lead { font: 400 clamp(29px, 3.3vw, 49px)/1.22 var(--serif); margin: 0 0 1.5rem; }
+.minister-attribution { display: grid; gap: .4rem; margin: 2rem 0; font-size: 15px; line-height: 1.6; }
+.minister-attribution strong { font-size: 20px; font-weight: 500; }
+.minister-words .text-link { color: var(--eggshell); border-color: var(--olive); font-size: 13px; line-height: 1.8; }
+.attendance-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(28px, 5vw, 80px); background: #dce7cf; }
+.attendance-section figure { margin: 0; }
+.attendance-section img { width: 100%; }
+.attendance-section figcaption { font-size: 13px; margin-top: 14px; line-height: 1.6; }
+.attendance-section h2 { margin-bottom: 1.5rem; }
+@media (max-width: 700px) {
+  .committee-roster, .minister-feature, .attendance-section { grid-template-columns: minmax(0, 1fr); }
+  .minister-feature { gap: 1.5rem; }
+  .minister-portrait img { aspect-ratio: 4 / 3; object-position: center 30%; }
+  .committee-roster li { font-size: 19px; }
+}
 :root {
   --phthalo: #133215;
   --olive: #92b775;

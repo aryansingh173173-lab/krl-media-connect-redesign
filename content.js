@@ -31,7 +31,7 @@ const T = {
     p3t: "09:40",
     p3: "Video testimonial. Shri Partha S. Chatterjee, Global Ambassador, BKS West Bengal. Video keynote from Dr. Krishan Bir Chaudhary.",
     p4t: "09:50",
-    p4: "Foundational vision and KRL Bengal launch. MahAcharya Shri Sourabh J. Sarkar.",
+    p4: "Foundational vision and KRL Bengal launch. MahAcharya Shri. sourabh J. sarkar.",
     p5t: "10:05",
     p5: "Felicitation of Smt. Rinku Majumder Ghosh, Adhyakshaa, Mahila Wing.",
     p6t: "10:10",
@@ -43,7 +43,7 @@ const T = {
     p9t: "10:45",
     p9: "Krishak Samaj Durga Puja 2026 announcement. Smt. Reena J. Sarkar.",
     p10t: "10:50",
-    p10: "Media questions. MahAcharya Shri Sourabh J. Sarkar and Smt. Rinku Majumder Ghosh.",
+    p10: "Media questions. MahAcharya Shri. sourabh J. sarkar and Smt. Rinku Majumder Ghosh.",
     p11t: "11:10",
     p11: "Vote of thanks and National Anthem. Smt. Reena J. Sarkar.",
     roomTitle: "The room",
@@ -53,7 +53,7 @@ const T = {
       "Stage set. Welcome banner, puja, and the four invited faces as printed.",
     openTitle: "The greeting",
     capOpen:
-      "MahAcharya Shri Sourabh J. Sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal on the bamboo seats.",
+      "MahAcharya Shri. sourabh J. sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal on the bamboo seats.",
     parthaTitle: "The video testimonial",
     parthaLede:
       "The hall played the film of Shri Partha S. Chatterjee, Global Ambassador and Senior Advisor for AI, Technology and Energy Transition, Bharatiya Krishak Samaj West Bengal.",
@@ -65,7 +65,7 @@ const T = {
     minLede:
       "Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, was on the stage at the opening. Krishi Ratna League Bengal was named in that room.",
     capMinListen:
-      "MahAcharya Shri Sourabh J. Sarkar at the lectern. Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal listening.",
+      "MahAcharya Shri. sourabh J. sarkar at the lectern. Smt. Rinku Majumder Ghosh and Shri Dudh Kumar Mondal listening.",
     capMinPair:
       "Smt. Rinku Majumder Ghosh with Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, on stage.",
     capMin:
@@ -79,7 +79,7 @@ const T = {
     capTrio:
       "Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
     capBell:
-      "The bell. Standing for the felicitation. MahAcharya Shri Sourabh J. Sarkar, Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
+      "The bell. Standing for the felicitation. MahAcharya Shri. sourabh J. sarkar, Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA.",
     capRinkuPodium:
       "Smt. Rinku Majumder Ghosh at the lectern. The keynote, 10:25.",
     dharTitle: "Guest of Honour",
@@ -92,26 +92,26 @@ const T = {
       "The argument of the morning, in each voice. Exact words from the recordings will replace these lines.",
     v1n: "Shri Dudh Kumar Mondal",
     v1r: "Hon'ble Minister of Agriculture, West Bengal",
-    v1: "The farmer is not a backdrop to policy. Krishi Ratna League puts the field at the centre of Bengal's next public contest.",
+    v1: "Farmers are the critical foundation of Bengal’s economic strength. The Krishi Ratna League provides vital encouragement to our cultivators, supporting farmer welfare and sustainable agricultural development across the state.",
     v2n: "Smt. Rinku Majumder Ghosh",
     v2r: "Adhyakshaa, Mahila Wing, Bharatiya Krishak Samaj",
     v2: "Half of Bengal's farm is a woman. The Mahila Wing is not a side room of the Samaj.",
     v3n: "Shri Debashish Dhar",
     v3r: "MLA, Sonarpur Uttar",
     v3: "Protyabartan is not nostalgia. It is the village asking its children to stand with the soil again.",
-    v4n: "MahAcharya Shri Sourabh J. Sarkar",
+    v4n: "MahAcharya Shri. sourabh J. sarkar",
     v4r: "State President, BKS West Bengal. KarmYog Ashram",
     v4: "A league with a working farm at the end of it, not a trophy on a shelf.",
     hallTitle: "The hall",
     capHall: "Press, farmers, the team. Rabindra Okakura Bhawan.",
     capLaunch:
-      "Launch of Krishi Ratna League Bengal on the screen. MahAcharya Shri Sourabh J. Sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA, seated.",
+      "Launch of Krishi Ratna League Bengal on the screen. MahAcharya Shri. sourabh J. sarkar at the lectern. Gunamata Reena J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA, seated.",
     pressTitle: "The press huddle",
     pressLede:
-      "After the programme the mics closed in. MahAcharya Shri Sourabh J. Sarkar, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar, MLA, and Gunamata Reena J. Sarkar took the questions together. Bonglive, 24 Ghanta and the rest of the room stayed until the last answer.",
+      "After the programme the mics closed in. MahAcharya Shri. sourabh J. sarkar, Smt. Rinku Majumder Ghosh, Shri Debashish Dhar, MLA, and Gunamata Reena J. Sarkar took the questions together. Bonglive, 24 Ghanta and the rest of the room stayed until the last answer.",
     capPanel:
-      "The press panel. Seated, left to right: Shri Rajib Roy, Gunamata Reena J. Sarkar, MahAcharya Shri Sourabh J. Sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA. Mics on the yellow cloth.",
-    capHuddle: "Cameras in. MahAcharya Shri Sourabh J. Sarkar facing the room.",
+      "The press panel. Seated, left to right: Shri Rajib Roy, Gunamata Reena J. Sarkar, MahAcharya Shri. sourabh J. sarkar, Smt. Rinku Majumder Ghosh and Shri Debashish Dhar, MLA. Mics on the yellow cloth.",
+    capHuddle: "Cameras in. MahAcharya Shri. sourabh J. sarkar facing the room.",
     capPressDhar: "Shri Debashish Dhar to the mics.",
     capClose: "Outside Rabindra Okakura Bhawan after the morning.",
     navGuests: "Guests",
@@ -122,7 +122,7 @@ const T = {
     gr1: "",
     gn2: "Gunamata Reena J. Sarkar",
     gr2: "Chief of Technology, Bharatiya Krishak Samaj. Co-Founder and CTO, KarmYog for the 21st Century",
-    gn3: "MahAcharya Shri Sourabh J. Sarkar",
+    gn3: "MahAcharya Shri. sourabh J. sarkar",
     gr3: "State President, Bharatiya Krishak Samaj West Bengal. KarmYog Ashram",
     gn4: "Smt. Rinku Majumder Ghosh",
     gr4: "Adhyakshaa, Mahila Wing, Bharatiya Krishak Samaj West Bengal",
@@ -221,7 +221,7 @@ const T = {
     p3t: "০৯:৪০",
     p3: "ভিডিও সাক্ষ্য. শ্রী পার্থ এস. চ্যাটার্জি, গ্লোবাল অ্যাম্বাসেডর, বি কে এস পশ্চিমবঙ্গ. ড. কৃষণ বীর চৌধুরীর ভিডিও মূল বক্তব্য.",
     p4t: "০৯:৫০",
-    p4: "মূল দর্শন ও কৃষি রত্ন লীগ বাংলা উদ্বোধন. মহাচার্য শ্রী সৌরভ জে. সরকার.",
+    p4: "মূল দর্শন ও কৃষি রত্ন লীগ বাংলা উদ্বোধন. MahAcharya Shri. sourabh J. sarkar.",
     p5t: "১০:০৫",
     p5: "শ্রীমতি রিঙ্কু মজুমদার ঘোষের সম্মাননা. অধ্যক্ষা, মহিলা শাখা.",
     p6t: "১০:১০",
@@ -233,7 +233,7 @@ const T = {
     p9t: "১০:৪৫",
     p9: "কৃষক সমাজের দুর্গা পূজা ২০২৬ ঘোষণা. শ্রীমতি রীনা জে. সরকার.",
     p10t: "১০:৫০",
-    p10: "মিডিয়া প্রশ্ন. মহাচার্য শ্রী সৌরভ জে. সরকার ও শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
+    p10: "মিডিয়া প্রশ্ন. MahAcharya Shri. sourabh J. sarkar ও শ্রীমতি রিঙ্কু মজুমদার ঘোষ.",
     p11t: "১১:১০",
     p11: "ধন্যবাদ ও জাতীয় সঙ্গীত. শ্রীমতি রীনা জে. সরকার.",
     roomTitle: "ঘর",
@@ -242,7 +242,7 @@ const T = {
     capStage: "মঞ্চ. স্বাগত ব্যানার, পূজা, এবং ছাপা নিমন্ত্রণের চার মুখ.",
     openTitle: "নমস্কার",
     capOpen:
-      "মহাচার্য শ্রী সৌরভ জে. সরকার বেদিতে. গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল বাঁশের আসনে.",
+      "MahAcharya Shri. sourabh J. sarkar বেদিতে. গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল বাঁশের আসনে.",
     parthaTitle: "ভিডিও সাক্ষ্য",
     parthaLede:
       "হলে দেখানো হয় শ্রী পার্থ এস. চ্যাটার্জির সাক্ষ্যচিত্র. তিনি ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গের গ্লোবাল অ্যাম্বাসেডর এবং এআই, প্রযুক্তি ও শক্তি রূপান্তরের সিনিয়র অ্যাডভাইজার.",
@@ -253,7 +253,7 @@ const T = {
     minLede:
       "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ, মিডিয়া সংযোগের সূচনায় মঞ্চে ছিলেন. কৃষি রত্ন লীগ বাংলা সেই ঘরেই নাম পেল.",
     capMinListen:
-      "বেদিতে মহাচার্য শ্রী সৌরভ জে. সরকার. শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল শুনছেন.",
+      "বেদিতে MahAcharya Shri. sourabh J. sarkar. শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দুধ কুমার মণ্ডল শুনছেন.",
     capMinPair:
       "মঞ্চে শ্রীমতি রিঙ্কু মজুমদার ঘোষ এবং শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী.",
     capMin: "শ্রী দুধ কুমার মণ্ডল, মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ.",
@@ -266,7 +266,7 @@ const T = {
     capTrio:
       "গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
     capBell:
-      "ঘণ্টা. সম্মাননায় দাঁড়ানো. মহাচার্য শ্রী সৌরভ জে. সরকার, গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
+      "ঘণ্টা. সম্মাননায় দাঁড়ানো. MahAcharya Shri. sourabh J. sarkar, গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
     capRinkuPodium: "বেদিতে শ্রীমতি রিঙ্কু মজুমদার ঘোষ. মূল ভাষণ, ১০:২৫.",
     dharTitle: "প্রধান অতিথি",
     dharLede:
@@ -278,26 +278,26 @@ const T = {
       "সেই সকালের যুক্তি, প্রতিটি কণ্ঠে. রেকর্ডিং থেকে ঠিক কথাগুলি পরে বসবে.",
     v1n: "শ্রী দুধ কুমার মণ্ডল",
     v1r: "মাননীয় কৃষিমন্ত্রী, পশ্চিমবঙ্গ",
-    v1: "কৃষক নীতির পেছনের দৃশ্য নন. কৃষি রত্ন লীগ বাংলার পরের জনপ্রতিযোগিতার কেন্দ্রে ক্ষেতকে রাখে.",
+    v1: "কৃষকরাই বাংলার অর্থনৈতিক শক্তির মূল স্তম্ভ। কৃষি রত্ন লিগ আমাদের কৃষক ভাই-বোনদের অসামান্য উৎসাহ জোগাবে এবং রাজ্যজুড়ে টেকসই কৃষিউন্নয়ন ও কৃষক কল্যাণে এক সুদূরপ্রসারী ভূমিকা পালন করবে।",
     v2n: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ",
     v2r: "অধ্যক্ষা, মহিলা শাখা, ভারতীয় কৃষক সমাজ",
     v2: "বাংলার ক্ষেতের অর্ধেক একজন নারী. মহিলা শাখা সমাজের পাশের ঘর নয়.",
     v3n: "শ্রী দেবাশীষ ধর",
     v3r: "বিধায়ক, সোনারপুর উত্তর",
     v3: "প্রত্যাবর্তন নস্টালজিয়া নয়. গ্রাম তার সন্তানদের মাটির পাশে দাঁড়াতে বলছে.",
-    v4n: "মহাচার্য শ্রী সৌরভ জে. সরকার",
+    v4n: "MahAcharya Shri. sourabh J. sarkar",
     v4r: "রাজ্য সভাপতি, বি কে এস পশ্চিমবঙ্গ. কর্মযোগ আশ্রম",
     v4: "শেষে একটি কাজ করা খামার নিয়ে লীগ, তাকে তাকের ট্রফি নয়.",
     hallTitle: "হল",
     capHall: "প্রেস, কৃষক, দল. রবীন্দ্র ওকাকুরা ভবন.",
     capLaunch:
-      "পর্দায় কৃষি রত্ন লীগ বাংলার উদ্বোধন. বেদিতে মহাচার্য শ্রী সৌরভ জে. সরকার. আসনে গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
+      "পর্দায় কৃষি রত্ন লীগ বাংলার উদ্বোধন. বেদিতে MahAcharya Shri. sourabh J. sarkar. আসনে গুণমাতা রীনা জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক.",
     pressTitle: "প্রেস আড্ডা",
     pressLede:
-      "অনুষ্ঠানের পর মাইক্রোফোন এগিয়ে এল. মহাচার্য শ্রী সৌরভ জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ, শ্রী দেবাশীষ ধর, বিধায়ক, এবং গুণমাতা রীনা জে. সরকার একসঙ্গে প্রশ্ন নিলেন. বংলাইভ, ২৪ ঘণ্টা এবং ঘরের বাকিরা শেষ উত্তর পর্যন্ত ছিলেন.",
+      "অনুষ্ঠানের পর মাইক্রোফোন এগিয়ে এল. MahAcharya Shri. sourabh J. sarkar, শ্রীমতি রিঙ্কু মজুমদার ঘোষ, শ্রী দেবাশীষ ধর, বিধায়ক, এবং গুণমাতা রীনা জে. সরকার একসঙ্গে প্রশ্ন নিলেন. বংলাইভ, ২৪ ঘণ্টা এবং ঘরের বাকিরা শেষ উত্তর পর্যন্ত ছিলেন.",
     capPanel:
-      "প্রেস প্যানেল. বাঁ দিক থেকে ডান দিকে আসনে: শ্রী রাজীব রায়, গুণমাতা রীনা জে. সরকার, মহাচার্য শ্রী সৌরভ জে. সরকার, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক. হলুদ কাপড়ে মাইক.",
-    capHuddle: "ক্যামেরা এগিয়ে. মহাচার্য শ্রী সৌরভ জে. সরকার ঘরের দিকে.",
+      "প্রেস প্যানেল. বাঁ দিক থেকে ডান দিকে আসনে: শ্রী রাজীব রায়, গুণমাতা রীনা জে. সরকার, MahAcharya Shri. sourabh J. sarkar, শ্রীমতি রিঙ্কু মজুমদার ঘোষ ও শ্রী দেবাশীষ ধর, বিধায়ক. হলুদ কাপড়ে মাইক.",
+    capHuddle: "ক্যামেরা এগিয়ে. MahAcharya Shri. sourabh J. sarkar ঘরের দিকে.",
     capPressDhar: "মাইকের সামনে শ্রী দেবাশীষ ধর.",
     capClose: "রবীন্দ্র ওকাকুরা ভবনের বাইরে, সকালের পর.",
     navGuests: "অতিথি",
@@ -308,7 +308,7 @@ const T = {
     gr1: "",
     gn2: "গুণমাতা রীনা জে. সরকার",
     gr2: "চিফ অফ টেকনোলজি, ভারতীয় কৃষক সমাজ. সহ-প্রতিষ্ঠাতা ও সিটিও, কর্মযোগ ফর দ্য টোয়েন্টিফার্স্ট সেঞ্চুরি",
-    gn3: "মহাচার্য শ্রী সৌরভ জে. সরকার",
+    gn3: "MahAcharya Shri. sourabh J. sarkar",
     gr3: "রাজ্য সভাপতি, ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ. কর্মযোগ আশ্রম",
     gn4: "শ্রীমতি রিঙ্কু মজুমদার ঘোষ",
     gr4: "অধ্যক্ষা, মহিলা শাখা, ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ",
