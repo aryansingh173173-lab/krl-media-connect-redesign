@@ -25,19 +25,15 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=journal-1" />
+    <link rel="stylesheet" href="styles.css?v=hero-film-1" />
     <script src="content.js?v=journal-1" defer></script>
     <script src="archive.js?v=journal-1" defer></script>
-    <script src="editorial.js?v=krl-2" defer></script>
-    <script src="app.js?v=journal-1" defer></script>
+    <script src="editorial.js?v=hero-film-1" defer></script>
+    <script src="app.js?v=hero-film-1" defer></script>
     <script src="motion.js?v=motion-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#day" data-i18n="skip">Skip to the story</a>
-    <div class="page-intro" aria-hidden="true">
-      <span class="page-intro-word">কৃষি রত্ন লীগ</span>
-      <i></i>
-    </div>
     <div class="cursor-orbit" aria-hidden="true"><span>↗</span></div>
     <aside class="chapter-rail" aria-label="Story progress">
       <span class="chapter-rail-number">00</span>
@@ -88,27 +84,35 @@
     </header>
     <main>
       <section class="hero" id="top">
+        <div class="hero-scene">
+        <div class="hero-backdrop" aria-hidden="true">
+          <video id="hero-video" autoplay muted loop playsinline preload="none" data-src="video/clip-1.mp4" poster="images/archive-photos/p01-opening-namaste-mahacharya-reena-rinku-minister.jpg" tabindex="-1"></video>
+        </div>
         <div class="hero-topline">
           <span
             ><i class="status-dot"></i>
             <span data-i18n="heroKicker">14 September 2026</span
             ><span class="dot-divider">/</span
             ><span data-i18n="kolkata">Kolkata, West Bengal</span></span
-          ><span data-i18n="journal">THE EVENT JOURNAL — 01</span>
+          ><span data-i18n="heroFootage">FROM THE MEDIA CONNECT</span>
         </div>
         <div class="hero-title">
+          <span class="eyebrow" data-i18n="eventName">Media Connect Session &amp; Agri-Innovation Convening</span>
           <h1><span data-i18n="heroTitle">Krishi Ratna League</span><span class="hero-region" data-i18n="heroRegion">Bengal</span></h1>
+        </div>
+        <div class="hero-scene-bottom">
+          <a class="hero-farmer-count" href="#launch"><strong data-i18n="farmerCount">5,000</strong><span data-i18n="farmerCountLabel">farmers across West Bengal</span><span aria-hidden="true">↗</span></a>
+          <a class="round-link hero-discover" href="#launch"><span data-i18n="heroExplore">Discover the League</span><span class="circle-arrow" aria-hidden="true">↓</span></a>
+          <button class="hero-video-toggle" type="button" aria-controls="hero-video" aria-pressed="false" data-i18n="pauseMotion">Pause motion</button>
+        </div>
         </div>
         <div class="hero-layout">
           <div class="hero-copy">
-            <span class="eyebrow" data-i18n="eventName"
-              >Media Connect Session &amp; Agri-Innovation Convening</span
-            >
-            <h2>
+            <p class="hero-standfirst">
               <span data-i18n="heroSub"
                 >On 14 September 2026, at Rabindra Okakura Bhawan, Bharatiya Krishak Samaj West Bengal placed the Krishi Ratna League before Bengal: 5,000 farmers, trained in Smart Farming and Integrated Farming Systems, then judged in open competition.</span
               >
-            </h2>
+            </p>
             <p data-i18n="fActsV">
               KRL Bengal. Mahila Wing. Krishak Samaj Durga Puja 2026.
             </p>
@@ -135,7 +139,7 @@
                   alt="The original Swagatam Media Connect welcome poster"
                   width="1242"
                   height="813"
-                  fetchpriority="high"
+                  loading="lazy"
                 /><span class="image-expand" aria-hidden="true">↗</span>
               </button>
             </div>

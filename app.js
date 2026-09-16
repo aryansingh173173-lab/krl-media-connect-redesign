@@ -369,8 +369,8 @@ function syncVideo(video) {
       sound.textContent = tr(sound.dataset.i18n);
       sound.setAttribute("aria-pressed", String(!video.muted));
     }
-  } else if (video.closest(".launch-section")) {
-    const button = $(".ambient-toggle");
+  } else if (video.closest(".launch-section, .hero-scene")) {
+    const button = video.closest(".hero-scene") ? $(".hero-video-toggle") : $(".ambient-toggle");
     button.dataset.i18n = video.paused ? "resumeMotion" : "pauseMotion";
     button.textContent = tr(button.dataset.i18n);
     button.setAttribute("aria-pressed", String(video.paused));
@@ -471,6 +471,7 @@ document.addEventListener("click", (event) => {
 $(".ambient-toggle").addEventListener("click", () =>
   toggleVideo($(".launch-backdrop video")),
 );
+$(".hero-video-toggle").addEventListener("click", () => toggleVideo($("#hero-video")));
 document.addEventListener("visibilitychange", () => {
   $$("video").forEach((video) => {
     if (document.hidden) video.pause();

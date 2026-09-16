@@ -3,6 +3,8 @@
 const EDITORIAL_COPY = {
   en: {
     heroRegion: "Bengal",
+    heroFootage: "FROM THE MEDIA CONNECT",
+    heroExplore: "Discover the League",
     eventName: "Media Connect Session & Agri-Innovation Convening",
     chapter2: "02 / THE LAUNCH",
     launchKicker: "KRISHI RATNA LEAGUE — BENGAL",
@@ -63,6 +65,8 @@ const EDITORIAL_COPY = {
   },
   bn: {
     heroRegion: "বাংলা",
+    heroFootage: "মিডিয়া সংযোগের মুহূর্ত",
+    heroExplore: "লীগ সম্পর্কে জানুন",
     eventName: "মিডিয়া সংযোগ অধিবেশন ও কৃষি উদ্ভাবন সম্মেলন",
     heroSub: "১৪ সেপ্টেম্বর ২০২৬, রবীন্দ্র ওকাকুরা ভবনে ভারতীয় কৃষক সমাজ পশ্চিমবঙ্গ বাংলার সামনে কৃষি রত্ন লীগকে তুলে ধরল: ৫,০০০ কৃষককে স্মার্ট ফার্মিং ও সমন্বিত চাষ পদ্ধতিতে প্রশিক্ষণ দেওয়া হবে, তারপর উন্মুক্ত প্রতিযোগিতায় তাঁদের দক্ষতা বিচার করা হবে।",
     chapter2: "০২ / সূচনা",
