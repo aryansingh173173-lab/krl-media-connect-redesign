@@ -25,11 +25,11 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=editorial-20260916" />
+    <link rel="stylesheet" href="styles.css?v=press-20260916" />
     <script src="content.js?v=editorial-20260916" defer></script>
     <script src="archive.js?v=editorial-20260916" defer></script>
-    <script src="editorial.js?v=editorial-20260916" defer></script>
-    <script src="app.js?v=editorial-20260916" defer></script>
+    <script src="editorial.js?v=press-20260916" defer></script>
+    <script src="app.js?v=press-20260916" defer></script>
     <script src="motion.js?v=motion-1" defer></script>
   </head>
   <body>
@@ -654,17 +654,17 @@
             from the morning of 14 September 2026 are added here as they appear.
           </p>
         </div>
-        <div class="press-feature" id="press">
-          <a
-            class="clipping-image"
-            href="press/Hello-Evening-Kolkata-14-Sep-2026-page-7.pdf"
-            target="_blank"
-            rel="noopener"
+        <div class="press-clippings" id="press">
+        <div class="press-feature">
+          <button
+            class="clipping-image image-open"
+            data-image="images/press-hello-kolkata-14-sep-2026.jpg"
+            data-caption="pressHelloCaption"
             ><img
-              src="images/press-clip-hello-kolkata.jpg"
+              src="images/press-hello-kolkata-14-sep-2026.jpg"
               alt="Hello Evening Kolkata press clipping"
               loading="lazy"
-          /></a>
+          /><span class="press-read" data-i18n="pressRead">Read & zoom ↗</span></button>
           <div>
             <span class="eyebrow" data-i18n="clipOutlet"></span>
             <h3 data-i18n="clipHead">
@@ -680,6 +680,29 @@
               >Download the page (PDF)</a
             >
           </div>
+        </div>
+        <div class="clippings-heading">
+          <h3 data-i18n="pressCollectionTitle">Across the newspapers</h3>
+          <p data-i18n="pressCollectionHint">Select a clipping to read, zoom and browse all five. Original editions are preserved as published.</p>
+        </div>
+        <div class="clippings-grid">
+          <figure>
+            <button class="image-open" data-image="images/press-dainik-pratham-15-sep-2026.jpg" data-caption="pressPrathamCaption"><img src="images/press-dainik-pratham-15-sep-2026.jpg" alt="Dainik Pratham newspaper clipping in Bengali" loading="lazy" /><span class="press-read" data-i18n="pressRead">Read & zoom ↗</span></button>
+            <figcaption><h4 data-i18n="pressPrathamName">Dainik Pratham</h4><p data-i18n="pressPrathamDate">15 September 2026 · Bengali</p></figcaption>
+          </figure>
+          <figure>
+            <button class="image-open" data-image="images/press-world-watch-16-sep-2026.jpg" data-caption="pressWorldCaption"><img src="images/press-world-watch-16-sep-2026.jpg" alt="World Watch newspaper clipping in English" loading="lazy" /><span class="press-read" data-i18n="pressRead">Read & zoom ↗</span></button>
+            <figcaption><h4 data-i18n="pressWorldName">World Watch</h4><p data-i18n="pressWorldDate">16 September 2026 · English</p></figcaption>
+          </figure>
+          <figure>
+            <button class="image-open" data-image="images/press-aro-khabar-16-sep-2026.jpg" data-caption="pressAroCaption"><img src="images/press-aro-khabar-16-sep-2026.jpg" alt="Aro Khabar newspaper clipping in Bengali" loading="lazy" /><span class="press-read" data-i18n="pressRead">Read & zoom ↗</span></button>
+            <figcaption><h4 data-i18n="pressAroName">Aro Khabar</h4><p data-i18n="pressAroDate">16 September 2026 · Bengali</p></figcaption>
+          </figure>
+          <figure>
+            <button class="image-open" data-image="images/press-jhalak-15-sep-2026.jpg" data-caption="pressJhalakCaption"><img src="images/press-jhalak-15-sep-2026.jpg" alt="Shaam Ki Jhalak newspaper clipping in Hindi" loading="lazy" /><span class="press-read" data-i18n="pressRead">Read & zoom ↗</span></button>
+            <figcaption><h4 data-i18n="pressJhalakName">Shaam Ki Jhalak</h4><p data-i18n="pressJhalakDate">15 September 2026 · Hindi</p></figcaption>
+          </figure>
+        </div>
         </div>
         <div class="press-links">
           <a href="https://youtu.be/cXO3fjWX-jg" target="_blank" rel="noopener"

@@ -72,6 +72,7 @@ for (const file of ["index.html", "content.js", "editorial.js", "archive.js", "a
 const committee = ["Shri Ram Badrinathan", "Smt. Reena J. Sarkar", "Shri Akhilesh Kumar Singh", "Shri Rajiv Roy", "Shri Amit Bansal", "Dr. Swapan Chakravarty", "Shri Kalyan Mukherjee (Retd. IPS)", "Shri Apurba Bera", "Shri Kalyan Bhattacharya", "Shri Subhashis Ghosh"];
 committee.forEach((name, index) => assert.equal(ctx.copy.en[`committee${index + 1}`], name));
 assert.ok(html.includes('id="minister"'), "Ministerial feature missing");
+assert.equal((html.match(/data-caption="press(?:Hello|Pratham|World|Aro|Jhalak)Caption"/g) || []).length, 5, "Expected all five supplied newspaper clippings");
 assert.equal(ctx.copy.en.ministerQuote1, "“Farmers are the critical foundation of Bengal’s economic strength.”");
 console.log(
   `Verified ${new Set(keys).size} bilingual content keys, ${new Set(refs).size} references, ${ctx.archive.length} archive records, and all section links.`,

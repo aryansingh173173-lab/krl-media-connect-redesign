@@ -633,6 +633,9 @@ document.addEventListener("click", (event) => {
     lightboxIndex = lightboxItems.findIndex(
       (x) => String(x.id) === button.dataset.galleryId,
     );
+  } else if (button.closest(".press-clippings")) {
+    lightboxItems = $$(".press-clippings .image-open").map(b => ({src:b.dataset.image,key:b.dataset.caption}));
+    lightboxIndex = lightboxItems.findIndex(item => item.src === button.dataset.image);
   } else if (button.closest(".invitation-pair")) {
     lightboxItems = $$(".invitation-pair .image-open").map(b => ({src:b.dataset.image,key:b.dataset.caption}));
     lightboxIndex = lightboxItems.findIndex(item => item.src === button.dataset.image);
