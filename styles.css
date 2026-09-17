@@ -1,19 +1,19 @@
 @font-face {
-  font-family: Outfit;
-  src: url("fonts/outfit-400.woff2") format("woff2");
+  font-family: Carlito;
+  src: url("fonts/carlito-regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: Outfit;
-  src: url("fonts/outfit-500.woff2") format("woff2");
+  font-family: Carlito;
+  src: url("fonts/carlito-regular.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: Outfit;
-  src: url("fonts/outfit-600.woff2") format("woff2");
-  font-weight: 600;
+  font-family: Carlito;
+  src: url("fonts/carlito-bold.ttf") format("truetype");
+  font-weight: 600 900;
   font-display: swap;
 }
 @font-face {
@@ -86,7 +86,7 @@
   --lavender: #dce7cf;
   --line: rgb(19 50 21 / 0.22);
   --serif: Georgia, "Times New Roman", Bengali, serif;
-  --sans: Outfit, Bengali, sans-serif;
+  --sans: Aptos, Carlito, "Segoe UI", Bengali, sans-serif;
   --pad: clamp(22px, 5.2vw, 88px);
 }
 img {
@@ -1363,7 +1363,7 @@ summary:focus-visible {
 }
 html[lang="bn"] {
   --serif: Bengali, Georgia, serif;
-  --sans: Bengali, Outfit, sans-serif;
+  --sans: Bengali, Aptos, Carlito, "Segoe UI", sans-serif;
 }
 html[lang="bn"] .hero h1 {
   font-size: clamp(72px, 11.5vw, 170px);
@@ -3188,7 +3188,7 @@ body:hover .cursor-orbit {
 .acceptance-portrait img { aspect-ratio: 3 / 4; object-fit: cover; }
 .acceptance-portrait figcaption { display: grid; gap: 6px; margin-top: 18px; font-size: 13px; }
 .acceptance-layout h2 { font-size: clamp(35px, 4vw, 62px); margin: 0 0 25px; }
-.acceptance-body { margin: 30px 0 0; padding-left: 24px; border-left: 2px solid var(--olive); font-family: Outfit, sans-serif; }
+.acceptance-body { margin: 30px 0 0; padding-left: 24px; border-left: 2px solid var(--olive); font-family: var(--sans); }
 .acceptance-quote { margin: 0; padding: clamp(24px, 5vw, 72px); background: var(--phthalo); color: var(--eggshell); }
 .acceptance-quote blockquote { margin: 0; font: 400 clamp(26px, 3.4vw, 50px)/1.42 Georgia, serif; }
 .acceptance-quote figcaption { display: grid; gap: 5px; margin-top: 36px; max-width: 620px; font-size: 14px; }
@@ -3353,4 +3353,32 @@ body:hover .cursor-orbit {
   .hero-scene .hero-title { order: 3; width: 100%; padding: 0; margin: 0; }
   .hero-scene h1, html[lang="bn"] .hero-scene h1 { font-size: clamp(46px, 12vw, 78px); }
   .hero-scene-bottom { order: 4; }
+}
+
+/* Ministerial contribution is the first editorial feature, not a guest-card footnote. */
+.hero-film-controls { position: absolute; right: var(--pad); bottom: 32px; z-index: 2; }
+.hero-scene-bottom { padding-right: 155px; }
+.hero-scene .hero-title { padding-top: 28px; padding-bottom: 28px; }
+.hero-minister { display: grid; gap: 6px; margin-top: 26px; border-left: 2px solid var(--olive); padding-left: 18px; font: 400 18px/1.4 var(--sans); max-width: 480px; }
+.hero-minister strong { font-size: clamp(21px, 1.8vw, 27px); font-weight: 600; }
+.hero-minister-read { color: var(--olive); font-size: 15px; margin-top: 4px; text-decoration: underline; text-underline-offset: 4px; }
+.hero-minister:hover .hero-minister-read { color: var(--eggshell); }
+.minister-section { padding-top: clamp(32px, 4vw, 64px); padding-bottom: clamp(32px, 4vw, 64px); }
+.minister-section .minister-feature { margin: 0; }
+.minister-identity { display: grid; gap: 12px; margin: 24px 0 0; }
+.minister-identity strong { font: 400 clamp(30px, 3vw, 46px)/1.2 var(--serif); }
+.minister-identity span { color: var(--olive); font: 400 clamp(18px, 1.6vw, 23px)/1.5 var(--sans); }
+.site-header > nav:not(#mobile-nav) { gap: clamp(16px, 1.7vw, 26px); font-size: 15px; white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .site-header > nav:not(#mobile-nav) { display: none; }
+  .menu-toggle { display: block; }
+  .site-header #mobile-nav { position: absolute; top: 100%; left: 0; right: 0; display: flex; flex-direction: column; gap: 10px; background: var(--eggshell); padding: 20px var(--pad); border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 760px) {
+  .hero-film-controls { position: static; order: 3; align-self: flex-end; margin-top: -10px; }
+  .hero-scene .hero-title { order: 4; }
+  .hero-scene-bottom { order: 5; padding-right: 0; }
+  .hero-scene .hero-title { padding: 0; }
+  .hero-minister { font-size: 17px; margin-top: 22px; }
+  .minister-identity { margin-top: 18px; }
 }

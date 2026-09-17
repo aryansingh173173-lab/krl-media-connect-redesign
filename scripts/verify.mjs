@@ -72,6 +72,10 @@ for (const file of ["index.html", "content.js", "editorial.js", "archive.js", "a
 const committee = ["Shri Ram Badrinathan", "Smt. Reena J. Sarkar", "Shri Akhilesh Kumar Singh", "Shri Rajiv Roy", "Shri Amit Bansal", "Dr. Swapan Chakravarty", "Shri Kalyan Mukherjee (Retd. IPS)", "Shri Apurba Bera", "Shri Kalyan Bhattacharya", "Shri Subhashis Ghosh"];
 committee.forEach((name, index) => assert.equal(ctx.copy.en[`committee${index + 1}`], name));
 assert.ok(html.includes('id="minister"'), "Ministerial feature missing");
+assert.ok(html.indexOf('id="minister"') < html.indexOf('id="day"'), "Ministerial address must precede the day's chronology");
+assert.ok(html.indexOf('id="minister"') < html.indexOf('id="launch"'), "Ministerial address must precede the League announcement");
+assert.ok(!/Outfit|outfit-/.test(read("styles.css") + html), "Old sans-serif font still in use");
+for (const font of ["fonts/carlito-regular.ttf", "fonts/carlito-bold.ttf", "fonts/CARLITO-OFL.txt"]) assert.ok(fs.existsSync(path.join(root, font)), `Missing font or license: ${font}`);
 assert.match(html, /id="hero-video"[^>]+data-src="video\/krl-portrait-hero\.mp4"[^>]+poster="images\/hero-krl-portrait\.jpg"/, "Homepage must use the approved portrait film and matching poster");
 assert.equal((html.match(/data-caption="press(?:Hello|Pratham|World|Aro|Jhalak)Caption"/g) || []).length, 5, "Expected all five supplied newspaper clippings");
 assert.equal(ctx.copy.en.ministerQuote1, "“Farmers are the critical foundation of Bengal’s economic strength.”");

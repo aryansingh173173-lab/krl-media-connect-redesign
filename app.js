@@ -724,7 +724,7 @@ function updateProgress() {
     "scaleX(" +
     (distance > 0 ? Math.min(1, window.scrollY / distance) : 0) +
     ")";
-  const sections = ["day", "guests", "gallery", "media"];
+  const sections = ["minister", "day", "guests", "gallery", "media"];
   let active = "";
   sections.forEach((id) => {
     if (

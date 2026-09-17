@@ -20,16 +20,16 @@
     <link rel="icon" href="images/bks-seal.jpg" />
     <link
       rel="preload"
-      href="fonts/outfit-400.woff2"
+      href="fonts/carlito-regular.ttf"
       as="font"
-      type="font/woff2"
+      type="font/ttf"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=portrait-hero-20260916" />
+    <link rel="stylesheet" href="styles.css?v=minister-type-20260917" />
     <script src="content.js?v=editorial-20260916" defer></script>
     <script src="archive.js?v=editorial-20260916" defer></script>
-    <script src="editorial.js?v=press-20260916" defer></script>
-    <script src="app.js?v=press-20260916" defer></script>
+    <script src="editorial.js?v=minister-type-20260917" defer></script>
+    <script src="app.js?v=minister-type-20260917" defer></script>
     <script src="motion.js?v=motion-1" defer></script>
   </head>
   <body>
@@ -53,7 +53,8 @@
         ></a
       >
       <nav aria-label="Main navigation">
-        <a href="#day" data-i18n="navDay">The day</a
+        <a href="#minister" data-i18n="navMinister">Minister’s address</a
+        ><a href="#day" data-i18n="navDay">The day</a
         ><a href="#guests" data-i18n="navGuests">Guests</a
         ><a href="#gallery" data-i18n="navGallery">Gallery</a
         ><a href="#media" data-i18n="navMedia">Media</a>
@@ -75,7 +76,8 @@
         </button>
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation" hidden>
-        <a href="#day" data-i18n="navDay">The day</a
+        <a href="#minister" data-i18n="navMinister">Minister’s address</a
+        ><a href="#day" data-i18n="navDay">The day</a
         ><a href="#guests" data-i18n="navGuests">Guests</a
         ><a href="#gallery" data-i18n="navGallery">Gallery</a
         ><a href="#media" data-i18n="navMedia">Media</a>
@@ -88,6 +90,7 @@
         <div class="hero-backdrop" aria-hidden="true">
           <video id="hero-video" autoplay muted loop playsinline preload="none" data-src="video/krl-portrait-hero.mp4" poster="images/hero-krl-portrait.jpg" tabindex="-1"></video>
         </div>
+        <div class="hero-film-controls"><button class="hero-video-toggle" type="button" aria-controls="hero-video" aria-pressed="false" data-i18n="pauseMotion">Pause motion</button></div>
         <div class="hero-topline">
           <span
             ><i class="status-dot"></i>
@@ -99,11 +102,11 @@
         <div class="hero-title">
           <span class="eyebrow" data-i18n="eventName">Media Connect Session &amp; Agri-Innovation Convening</span>
           <h1><span data-i18n="heroTitle">Krishi Ratna League</span><span class="hero-region" data-i18n="heroRegion">Bengal</span></h1>
+          <a class="hero-minister" href="#minister"><strong data-i18n="heroMinister">With Shri Dudh Kumar Mondal</strong><span data-i18n="v1r">Hon'ble Minister of Agriculture, West Bengal</span><span class="hero-minister-read" data-i18n="ministerRead">Read the minister’s address ↗</span></a>
         </div>
         <div class="hero-scene-bottom">
           <a class="hero-farmer-count" href="#launch"><strong data-i18n="farmerCount">5,000</strong><span data-i18n="farmerCountLabel">farmers across West Bengal</span><span aria-hidden="true">↗</span></a>
           <a class="round-link hero-discover" href="#launch"><span data-i18n="heroExplore">Discover the League</span><span class="circle-arrow" aria-hidden="true">↓</span></a>
-          <button class="hero-video-toggle" type="button" aria-controls="hero-video" aria-pressed="false" data-i18n="pauseMotion">Pause motion</button>
         </div>
         </div>
         <div class="hero-layout">
@@ -157,6 +160,31 @@
           <span data-i18n="footOrgs"></span
           ><span data-i18n="scroll">SCROLL TO DISCOVER ↓</span>
         </div>
+      </section>
+
+      <section class="section-pad minister-section" aria-labelledby="minister-title">
+        <article class="minister-feature" id="minister" aria-labelledby="minister-title">
+          <div class="minister-heading">
+            <span class="eyebrow" data-i18n="ministerKicker">10:10 / THE MINISTERIAL ADDRESS</span>
+            <h2 id="minister-title" data-i18n="ministerTitle">The Ministerial Address</h2>
+            <p class="minister-identity"><strong data-i18n="v1n">Shri Dudh Kumar Mondal</strong><span data-i18n="v1r">Hon'ble Minister of Agriculture, West Bengal</span></p>
+          </div>
+          <figure class="minister-portrait">
+            <button class="image-open" data-image="images/minister.jpg" data-caption="ministerCaption">
+              <img src="images/minister.jpg" alt="Shri Dudh Kumar Mondal at the Media Connect session" loading="lazy" />
+              <span class="image-expand">↗</span>
+            </button>
+            <figcaption data-i18n="ministerCaption">Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, at the Media Connect session.</figcaption>
+          </figure>
+          <div class="minister-words">
+            <blockquote>
+              <p class="minister-lead" data-i18n="ministerQuote1">“Farmers are the critical foundation of Bengal’s economic strength.”</p>
+              <p data-i18n="ministerQuote2">“The Krishi Ratna League provides vital encouragement to our cultivators, supporting farmer welfare and sustainable agricultural development across the state.”</p>
+            </blockquote>
+            <p class="minister-attribution"><strong data-i18n="v1n">Shri Dudh Kumar Mondal</strong><span data-i18n="v1r">Hon'ble Minister of Agriculture, West Bengal</span></p>
+            <a class="text-link" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" target="_blank" rel="noopener" data-i18n="ministerSource">Excerpts published in the official release · 14 September 2026 ↗</a>
+          </div>
+        </article>
       </section>
 
       <div class="kinetic-strip" aria-hidden="true">
@@ -376,27 +404,6 @@
           <span data-i18n="chapter3">04 / THE PEOPLE</span
           ><span data-i18n="together">MANY VOICES. SHARED PURPOSE.</span>
         </div>
-        <article class="minister-feature" id="minister" aria-labelledby="minister-title">
-          <div class="minister-heading">
-            <span class="eyebrow" data-i18n="ministerKicker">10:10 / THE MINISTERIAL ADDRESS</span>
-            <h2 id="minister-title" data-i18n="ministerTitle">Farmer welfare at the centre</h2>
-          </div>
-          <figure class="minister-portrait">
-            <button class="image-open" data-image="images/minister.jpg" data-caption="ministerCaption">
-              <img src="images/minister.jpg" alt="Shri Dudh Kumar Mondal at the Media Connect session" loading="lazy" />
-              <span class="image-expand">↗</span>
-            </button>
-            <figcaption data-i18n="ministerCaption">Shri Dudh Kumar Mondal, Hon'ble Minister of Agriculture, West Bengal, at the Media Connect session.</figcaption>
-          </figure>
-          <div class="minister-words">
-            <blockquote>
-              <p class="minister-lead" data-i18n="ministerQuote1">“Farmers are the critical foundation of Bengal’s economic strength.”</p>
-              <p data-i18n="ministerQuote2">“The Krishi Ratna League provides vital encouragement to our cultivators, supporting farmer welfare and sustainable agricultural development across the state.”</p>
-            </blockquote>
-            <p class="minister-attribution"><strong data-i18n="v1n">Shri Dudh Kumar Mondal</strong><span data-i18n="v1r">Hon'ble Minister of Agriculture, West Bengal</span></p>
-            <a class="text-link" href="press/BKS-KY21C-Press-Release-14-Sep-2026.pdf" target="_blank" rel="noopener" data-i18n="ministerSource">Excerpts published in the official release · 14 September 2026 ↗</a>
-          </div>
-        </article>
         <div class="section-heading">
           <h2 class="display" data-i18n="guestsTitle">
             The guests

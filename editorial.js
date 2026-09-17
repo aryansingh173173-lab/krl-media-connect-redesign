@@ -2,6 +2,9 @@
 // outside the deployed site in ../EDITORIAL-REVIEW.md.
 const EDITORIAL_COPY = {
   en: {
+    navMinister: "Minister’s address",
+    heroMinister: "With Shri Dudh Kumar Mondal",
+    ministerRead: "Read the minister’s address ↗",
     pressCollectionTitle: "Across the newspapers",
     pressCollectionHint: "Select a clipping to read, zoom and browse all five. Original editions are preserved as published.",
     pressRead: "Read & zoom ↗",
@@ -32,7 +35,7 @@ const EDITORIAL_COPY = {
     committee9: "Shri Kalyan Bhattacharya",
     committee10: "Shri Subhashis Ghosh",
     ministerKicker: "10:10 / THE MINISTERIAL ADDRESS",
-    ministerTitle: "Farmer welfare at the centre",
+    ministerTitle: "The Ministerial Address",
     ministerQuote1: "“Farmers are the critical foundation of Bengal’s economic strength.”",
     ministerQuote2: "“The Krishi Ratna League provides vital encouragement to our cultivators, supporting farmer welfare and sustainable agricultural development across the state.”",
     ministerSource: "Excerpts published in the official release · 14 September 2026 ↗",
@@ -105,6 +108,9 @@ const EDITORIAL_COPY = {
     clipCaption7: "Shri Debashish Dhar answers reporters in the press huddle.",
   },
   bn: {
+    navMinister: "কৃষিমন্ত্রীর ভাষণ",
+    heroMinister: "উপস্থিত ছিলেন শ্রী দুধ কুমার মণ্ডল",
+    ministerRead: "কৃষিমন্ত্রীর ভাষণ পড়ুন ↗",
     pressCollectionTitle: "সংবাদপত্রের পাতায়",
     pressCollectionHint: "বড় করে পড়তে একটি সংবাদপত্রের কাটিং বেছে নিন। একই সঙ্গে পাঁচটিই দেখতে পারবেন। মূল সংস্করণগুলি প্রকাশিত অবস্থায় সংরক্ষিত।",
     pressRead: "বড় করে পড়ুন ↗",
@@ -135,7 +141,7 @@ const EDITORIAL_COPY = {
     committee9: "শ্রী কল্যাণ ভট্টাচার্য",
     committee10: "শ্রী শুভাশিস ঘোষ",
     ministerKicker: "১০:১০ / কৃষিমন্ত্রীর ভাষণ",
-    ministerTitle: "কেন্দ্রে কৃষকের কল্যাণ",
+    ministerTitle: "কৃষিমন্ত্রীর ভাষণ",
     ministerQuote1: "“কৃষকরাই বাংলার অর্থনৈতিক শক্তির মূল স্তম্ভ।”",
     ministerQuote2: "“কৃষি রত্ন লিগ আমাদের কৃষক ভাই-বোনদের অসামান্য উৎসাহ জোগাবে এবং রাজ্যজুড়ে টেকসই কৃষিউন্নয়ন ও কৃষক কল্যাণে এক সুদূরপ্রসারী ভূমিকা পালন করবে।”",
     ministerSource: "আনুষ্ঠানিক সংবাদ বিজ্ঞপ্তিতে প্রকাশিত উদ্ধৃতাংশ · ১৪ সেপ্টেম্বর ২০২৬ ↗",
